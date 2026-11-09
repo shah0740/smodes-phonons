@@ -1,0 +1,419 @@
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-2a-3a] % smodes-phonons decomposition --parent ../POSCAR --sub POSCAR --k_vector X GM
+Stoichiometry: sub structure is 8x the parent's own formula-unit count.
+Parent: space group 221 (Pm-3m), a=4.13455 b=4.13455 c=4.13455 alpha=90.000 beta=90.000 gamma=90.000
+Sub:    space group 221 (Pm-3m), a=8.26909 b=8.26909 c=8.26909 alpha=90.000 beta=90.000 gamma=90.000
+
+=== k = X ===
+multi-arm BLEND -- sub structure matches the joint cell hosting 3 total arm-components across 5 irreps (X1+, X3-, X4-, X5+, X5-) simultaneously (not a single resolved arm); each component's own amplitude below is fitted by one joint least-squares projection; each is named by its own order-parameter position below, with the star arm it belongs to shown alongside
+note: the blended arms' own patterns are not fully orthogonal for at least one mode (largest Gram off-diagonal: 0.9460) -- the least-squares fit still accounts for this correctly, but read per-arm amplitudes with a bit more care
+strain (relative to this k-vector's own resolved target lattice, rotation already factored out):
+   0.000000   0.000000   0.000000
+   0.000000   0.000000  -0.000000
+   0.000000  -0.000000   0.000000
+det(F) = 1.000000
+total displacement norm: 0.017321 A
+parent-cell normalisation: this cell holds 8 primitive parent cell(s) -- divide any amplitude below by 2.82843 for the cell-size-independent value
+residual (unexplained by these irreps' own directions -- every swept/blended component's own fitted contribution, not just the native one): 0.000000 A (0.00%)
+
+  irrep      mode  species  degen  vector        As, per component (A)
+  X1+           0  Ba           3  0,0,0         (below noise floor)
+  X1+           1  O            3  a,a,a         a = 0.010000 A
+
+  X3-           0  Sn           3  0,0,0         (below noise floor)
+  X3-           1  O            3  0,0,0         (below noise floor)
+
+  X4-           0  O            3  0,0,0         (below noise floor)
+
+  X5+           0  Ba           6  0,0,0,0,0,0   (below noise floor)
+  X5+           1  O            6  0,0,0,0,0,0   (below noise floor)
+
+  X5-           0  Sn           6  0,0,0,0,0,0   (below noise floor)
+  X5-           1  O            6  0,0,0,0,0,0   (below noise floor)
+  X5-           2  O            6  0,0,0,0,0,0   (below noise floor)
+
+  how the positions in `vector` relate to each other:
+    native / (x,y,z)  a within-arm rotation -- a real symmetry operation of this
+                      arm's own cell maps one onto the other
+    armN / armNwM     a different star arm -- the same pattern propagating along
+                      another arm of the star, on its own differently-shaped cell
+                      (wM = a within-arm rotation on that arm)
+
+per-direction totals (sqrt of summed squared amplitude across every mode of that irrep -- shows whether a distortion is equally split across several directions, e.g. an (a,a,a)-type body-diagonal case, at a glance):
+  Two normalisations, matching ISODISTORT's own two columns: As is the norm over the resolved supercell (cell-size dependent); Ap is per primitive parent cell (cell-size independent). 'all components' is the whole order parameter at once -- the row directly comparable to ISODISTORT's per-irrep 'all' line.
+  irrep      direction             As (A)       Ap (A)
+  X1+        a;0;0               0.010000     0.003536   [native]
+  X1+        0;a;0               0.010000     0.003536   [arm2]
+  X1+        0;0;a               0.010000     0.003536   [arm3]
+  X1+        all components      0.017321     0.006124
+  X5+        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5+        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5+        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5+        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5+        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5+        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5+        all components      0.000000     0.000000
+  X3-        a;0;0               0.000000     0.000000   [native]
+  X3-        0;a;0               0.000000     0.000000   [arm2]
+  X3-        0;0;a               0.000000     0.000000   [arm3]
+  X3-        all components      0.000000     0.000000
+  X4-        a;0;0               0.000000     0.000000   [native]
+  X4-        0;a;0               0.000000     0.000000   [arm2]
+  X4-        0;0;a               0.000000     0.000000   [arm3]
+  X4-        all components      0.000000     0.000000
+  X5-        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5-        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5-        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5-        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5-        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5-        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5-        all components      0.000000     0.000000
+Wrote decomposition_mode_X
+Wrote decomposition_summary
+  note: GM: the joint order-parameter cell could not be used (DecompositionError: reference structure has 5 atoms, sub structure has 40 -- these must match exactly by this point (stoichiometry/target-lattice resolution should already have caught a real mismatch)) -- falling back to per-irrep resolution, which is more permissive about cell size but gives up exact cross-irrep orthogonality (cross-talk rises to ~2e-05 of the signal).
+  note: GM: the joint order-parameter cell could not be used (DecompositionError: reference structure has 5 atoms, sub structure has 40 -- these must match exactly by this point (stoichiometry/target-lattice resolution should already have caught a real mismatch)) -- falling back to per-irrep resolution, which is more permissive about cell size but gives up exact cross-irrep orthogonality (cross-talk rises to ~2e-05 of the signal).
+  note: GM: the joint order-parameter cell could not be used (DecompositionError: reference structure has 5 atoms, sub structure has 40 -- these must match exactly by this point (stoichiometry/target-lattice resolution should already have caught a real mismatch)) -- falling back to per-irrep resolution, which is more permissive about cell size but gives up exact cross-irrep orthogonality (cross-talk rises to ~2e-05 of the signal).
+
+=== k = GM ===
+strain (relative to this k-vector's own resolved target lattice, rotation already factored out):
+   0.000000   0.000000   0.000000
+   0.000000   0.000000  -0.000000
+   0.000000  -0.000000   0.000000
+det(F) = 1.000000
+total displacement norm: 0.017321 A
+parent-cell normalisation: this cell holds 8 primitive parent cell(s) -- divide any amplitude below by 2.82843 for the cell-size-independent value
+residual (unexplained by these irreps' own directions -- every swept/blended component's own fitted contribution, not just the native one): 0.017321 A (100.00%)
+
+  irrep      mode  species  degen  vector        As, per component (A)
+  GM4-          0  Ba           3  0,a,0         a = -0.000028 A
+  GM4-          1  Sn           3  0,0,0         (below noise floor)
+  GM4-          2  O            3  0,a,0         a = 0.000028 A
+  GM4-          3  O            3  0,0,0         (below noise floor)
+
+  GM5-          0  O            3  0,0,0         (below noise floor)
+
+  how the positions in `vector` relate to each other:
+    native / (x,y,z)  a within-arm rotation -- a real symmetry operation of this
+                      arm's own cell maps one onto the other
+
+per-direction totals (sqrt of summed squared amplitude across every mode of that irrep -- shows whether a distortion is equally split across several directions, e.g. an (a,a,a)-type body-diagonal case, at a glance):
+  Two normalisations, matching ISODISTORT's own two columns: As is the norm over the resolved supercell (cell-size dependent); Ap is per primitive parent cell (cell-size independent). 'all components' is the whole order parameter at once -- the row directly comparable to ISODISTORT's per-irrep 'all' line.
+  irrep      direction             As (A)       Ap (A)
+  GM4-       a,0,0               0.000000     0.000000   [native]
+  GM4-       0,a,0               0.000040     0.000014   [within]
+  GM4-       0,0,a               0.000000     0.000000   [within]
+  GM4-       all components      0.000040     0.000014
+  GM5-       a,0,0               0.000000     0.000000   [native]
+  GM5-       0,a,0               0.000000     0.000000   [within]
+  GM5-       0,0,a               0.000000     0.000000   [within]
+  GM5-       all components      0.000000     0.000000
+Wrote decomposition_mode_GM
+Wrote decomposition_summary
+
+Summary: irreps with meaningful contribution
+  X1+        (k=X)  a,a,a         0.017321 A
+  GM4-       (k=GM)  0,a,0         0.000040 A
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-2a-3a] % cd Freeze_X1+-m1-sym-1a-2a/
+-bash: cd: Freeze_X1+-m1-sym-1a-2a/: No such file or directory
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-2a-3a] % cd ../Freeze_X1+-m1-sym-1a-2a/
+INCAR  KPOINTS  POSCAR
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-2a] % smodes-phonons decomposition --parent ../POSCAR --sub POSCAR --k_vector X
+Stoichiometry: sub structure is 4x the parent's own formula-unit count.
+Parent: space group 221 (Pm-3m), a=4.13455 b=4.13455 c=4.13455 alpha=90.000 beta=90.000 gamma=90.000
+Sub:    space group 123 (P4/mmm), a=8.26909 b=8.26909 c=4.13455 alpha=90.000 beta=90.000 gamma=90.000
+
+=== k = X ===
+multi-arm BLEND -- sub structure matches the joint cell hosting 3 total arm-components across 5 irreps (X1+, X3-, X4-, X5+, X5-) simultaneously (not a single resolved arm); each component's own amplitude below is fitted by one joint least-squares projection; each is named by its own order-parameter position below, with the star arm it belongs to shown alongside
+note: the blended arms' own patterns are not fully orthogonal for at least one mode (largest Gram off-diagonal: 0.9460) -- the least-squares fit still accounts for this correctly, but read per-arm amplitudes with a bit more care
+strain (relative to this k-vector's own resolved target lattice, rotation already factored out):
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+det(F) = 1.000000
+total displacement norm: 0.014142 A
+parent-cell normalisation: this cell holds 4 primitive parent cell(s) -- divide any amplitude below by 2.00000 for the cell-size-independent value
+residual (unexplained by these irreps' own directions -- every swept/blended component's own fitted contribution, not just the native one): 0.000000 A (0.00%)
+
+  irrep      mode  species  degen  vector        As, per component (A)
+  X1+           0  Ba           3  0,0,0         (below noise floor)
+  X1+           1  O            3  a,a,0         a = 0.010000 A
+
+  X3-           0  Sn           3  0,0,0         (below noise floor)
+  X3-           1  O            3  0,0,0         (below noise floor)
+
+  X4-           0  O            3  0,0,0         (below noise floor)
+
+  X5+           0  Ba           6  0,0,0,0,0,0   (below noise floor)
+  X5+           1  O            6  0,0,0,0,0,0   (below noise floor)
+
+  X5-           0  Sn           6  0,0,0,0,0,0   (below noise floor)
+  X5-           1  O            6  0,0,0,0,0,0   (below noise floor)
+  X5-           2  O            6  0,0,0,0,0,0   (below noise floor)
+
+  how the positions in `vector` relate to each other:
+    native / (x,y,z)  a within-arm rotation -- a real symmetry operation of this
+                      arm's own cell maps one onto the other
+    armN / armNwM     a different star arm -- the same pattern propagating along
+                      another arm of the star, on its own differently-shaped cell
+                      (wM = a within-arm rotation on that arm)
+
+per-direction totals (sqrt of summed squared amplitude across every mode of that irrep -- shows whether a distortion is equally split across several directions, e.g. an (a,a,a)-type body-diagonal case, at a glance):
+  Two normalisations, matching ISODISTORT's own two columns: As is the norm over the resolved supercell (cell-size dependent); Ap is per primitive parent cell (cell-size independent). 'all components' is the whole order parameter at once -- the row directly comparable to ISODISTORT's per-irrep 'all' line.
+  irrep      direction             As (A)       Ap (A)
+  X1+        a;0;0               0.010000     0.005000   [native]
+  X1+        0;a;0               0.010000     0.005000   [arm2]
+  X1+        0;0;a               0.000000     0.000000   [arm3]
+  X1+        all components      0.014142     0.007071
+  X5+        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5+        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5+        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5+        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5+        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5+        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5+        all components      0.000000     0.000000
+  X3-        a;0;0               0.000000     0.000000   [native]
+  X3-        0;a;0               0.000000     0.000000   [arm2]
+  X3-        0;0;a               0.000000     0.000000   [arm3]
+  X3-        all components      0.000000     0.000000
+  X4-        a;0;0               0.000000     0.000000   [native]
+  X4-        0;a;0               0.000000     0.000000   [arm2]
+  X4-        0;0;a               0.000000     0.000000   [arm3]
+  X4-        all components      0.000000     0.000000
+  X5-        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5-        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5-        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5-        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5-        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5-        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5-        all components      0.000000     0.000000
+Wrote decomposition_mode_X
+Wrote decomposition_summary
+
+Summary: irreps with meaningful contribution
+  X1+        (k=X)  a,a,0         0.014142 A
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-2a] % cd ../Freeze_X1+-m1-sym-1a-3a/
+INCAR  KPOINTS  POSCAR
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-3a] % smodes-phonons decomposition --parent ../POSCAR --sub POSCAR --k_vector X
+Stoichiometry: sub structure is 4x the parent's own formula-unit count.
+Parent: space group 221 (Pm-3m), a=4.13455 b=4.13455 c=4.13455 alpha=90.000 beta=90.000 gamma=90.000
+Sub:    space group 123 (P4/mmm), a=4.13455 b=8.26909 c=8.26909 alpha=90.000 beta=90.000 gamma=90.000
+^[[A^[[A
+=== k = X ===
+multi-arm BLEND -- sub structure matches the joint cell hosting 3 total arm-components across 5 irreps (X1+, X3-, X4-, X5+, X5-) simultaneously (not a single resolved arm); each component's own amplitude below is fitted by one joint least-squares projection; each is named by its own order-parameter position below, with the star arm it belongs to shown alongside
+note: the blended arms' own patterns are not fully orthogonal for at least one mode (largest Gram off-diagonal: 0.9460) -- the least-squares fit still accounts for this correctly, but read per-arm amplitudes with a bit more care
+strain (relative to this k-vector's own resolved target lattice, rotation already factored out):
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+det(F) = 1.000000
+total displacement norm: 0.014142 A
+parent-cell normalisation: this cell holds 4 primitive parent cell(s) -- divide any amplitude below by 2.00000 for the cell-size-independent value
+residual (unexplained by these irreps' own directions -- every swept/blended component's own fitted contribution, not just the native one): 0.000000 A (0.00%)
+
+  irrep      mode  species  degen  vector        As, per component (A)
+  X1+           0  Ba           3  0,0,0         (below noise floor)
+  X1+           1  O            3  a,0,a         a = 0.010000 A
+
+  X3-           0  Sn           3  0,0,0         (below noise floor)
+  X3-           1  O            3  0,0,0         (below noise floor)
+
+  X4-           0  O            3  0,0,0         (below noise floor)
+
+  X5+           0  Ba           6  0,0,0,0,0,0   (below noise floor)
+  X5+           1  O            6  0,0,0,0,0,0   (below noise floor)
+
+  X5-           0  Sn           6  0,0,0,0,0,0   (below noise floor)
+  X5-           1  O            6  0,0,0,0,0,0   (below noise floor)
+  X5-           2  O            6  0,0,0,0,0,0   (below noise floor)
+
+  how the positions in `vector` relate to each other:
+    native / (x,y,z)  a within-arm rotation -- a real symmetry operation of this
+                      arm's own cell maps one onto the other
+    armN / armNwM     a different star arm -- the same pattern propagating along
+                      another arm of the star, on its own differently-shaped cell
+                      (wM = a within-arm rotation on that arm)
+
+per-direction totals (sqrt of summed squared amplitude across every mode of that irrep -- shows whether a distortion is equally split across several directions, e.g. an (a,a,a)-type body-diagonal case, at a glance):
+  Two normalisations, matching ISODISTORT's own two columns: As is the norm over the resolved supercell (cell-size dependent); Ap is per primitive parent cell (cell-size independent). 'all components' is the whole order parameter at once -- the row directly comparable to ISODISTORT's per-irrep 'all' line.
+  irrep      direction             As (A)       Ap (A)
+  X1+        a;0;0               0.010000     0.005000   [native]
+  X1+        0;a;0               0.000000     0.000000   [arm2]
+  X1+        0;0;a               0.010000     0.005000   [arm3]
+  X1+        all components      0.014142     0.007071
+  X5+        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5+        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5+        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5+        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5+        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5+        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5+        all components      0.000000     0.000000
+  X3-        a;0;0               0.000000     0.000000   [native]
+  X3-        0;a;0               0.000000     0.000000   [arm2]
+  X3-        0;0;a               0.000000     0.000000   [arm3]
+  X3-        all components      0.000000     0.000000
+  X4-        a;0;0               0.000000     0.000000   [native]
+  X4-        0;a;0               0.000000     0.000000   [arm2]
+  X4-        0;0;a               0.000000     0.000000   [arm3]
+  X4-        all components      0.000000     0.000000
+  X5-        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5-        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5-        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5-        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5-        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5-        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5-        all components      0.000000     0.000000
+Wrote decomposition_mode_X
+Wrote decomposition_summary
+
+Summary: irreps with meaningful contribution
+  X1+        (k=X)  a,0,a         0.014142 A
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-1a-3a] % cd ../Freeze_X1+-m1-sym-2a-3a/
+INCAR  KPOINTS  POSCAR
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-2a-3a] % smodes-phonons decomposition --parent ../POSCAR --sub POSCAR --k_vector X
+Stoichiometry: sub structure is 4x the parent's own formula-unit count.
+Parent: space group 221 (Pm-3m), a=4.13455 b=4.13455 c=4.13455 alpha=90.000 beta=90.000 gamma=90.000
+Sub:    space group 123 (P4/mmm), a=8.26909 b=4.13455 c=8.26909 alpha=90.000 beta=90.000 gamma=90.000
+^[[A^[[A
+=== k = X ===
+multi-arm BLEND -- sub structure matches the joint cell hosting 3 total arm-components across 5 irreps (X1+, X3-, X4-, X5+, X5-) simultaneously (not a single resolved arm); each component's own amplitude below is fitted by one joint least-squares projection; each is named by its own order-parameter position below, with the star arm it belongs to shown alongside
+note: the blended arms' own patterns are not fully orthogonal for at least one mode (largest Gram off-diagonal: 0.9460) -- the least-squares fit still accounts for this correctly, but read per-arm amplitudes with a bit more care
+strain (relative to this k-vector's own resolved target lattice, rotation already factored out):
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+det(F) = 1.000000
+total displacement norm: 0.014142 A
+parent-cell normalisation: this cell holds 4 primitive parent cell(s) -- divide any amplitude below by 2.00000 for the cell-size-independent value
+residual (unexplained by these irreps' own directions -- every swept/blended component's own fitted contribution, not just the native one): 0.000040 A (0.28%)
+
+  irrep      mode  species  degen  vector        As, per component (A)
+  X1+           0  Ba           3  0,0,0         (below noise floor)
+  X1+           1  O            3  0,a,a         a = 0.010000 A
+
+  X3-           0  Sn           3  0,0,0         (below noise floor)
+  X3-           1  O            3  0,0,0         (below noise floor)
+
+  X4-           0  O            3  0,0,0         (below noise floor)
+
+  X5+           0  Ba           6  0,0,0,0,0,0   (below noise floor)
+  X5+           1  O            6  0,0,0,0,0,0   (below noise floor)
+
+  X5-           0  Sn           6  0,0,0,0,0,0   (below noise floor)
+  X5-           1  O            6  0,0,0,0,0,0   (below noise floor)
+  X5-           2  O            6  0,0,0,0,0,0   (below noise floor)
+
+  how the positions in `vector` relate to each other:
+    native / (x,y,z)  a within-arm rotation -- a real symmetry operation of this
+                      arm's own cell maps one onto the other
+    armN / armNwM     a different star arm -- the same pattern propagating along
+                      another arm of the star, on its own differently-shaped cell
+                      (wM = a within-arm rotation on that arm)
+
+per-direction totals (sqrt of summed squared amplitude across every mode of that irrep -- shows whether a distortion is equally split across several directions, e.g. an (a,a,a)-type body-diagonal case, at a glance):
+  Two normalisations, matching ISODISTORT's own two columns: As is the norm over the resolved supercell (cell-size dependent); Ap is per primitive parent cell (cell-size independent). 'all components' is the whole order parameter at once -- the row directly comparable to ISODISTORT's per-irrep 'all' line.
+  irrep      direction             As (A)       Ap (A)
+  X1+        a;0;0               0.000000     0.000000   [native]
+  X1+        0;a;0               0.010000     0.005000   [arm2]
+  X1+        0;0;a               0.010000     0.005000   [arm3]
+  X1+        all components      0.014142     0.007071
+  X5+        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5+        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5+        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5+        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5+        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5+        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5+        all components      0.000000     0.000000
+  X3-        a;0;0               0.000000     0.000000   [native]
+  X3-        0;a;0               0.000000     0.000000   [arm2]
+  X3-        0;0;a               0.000000     0.000000   [arm3]
+  X3-        all components      0.000000     0.000000
+  X4-        a;0;0               0.000000     0.000000   [native]
+  X4-        0;a;0               0.000000     0.000000   [arm2]
+  X4-        0;0;a               0.000000     0.000000   [arm3]
+  X4-        all components      0.000000     0.000000
+  X5-        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5-        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5-        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5-        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5-        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5-        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5-        all components      0.000000     0.000000
+Wrote decomposition_mode_X
+Wrote decomposition_summary
+
+Summary: irreps with meaningful contribution
+  X1+        (k=X)  0,a,a         0.014142 A
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-2a-3a] % cd ../Freeze_X1+-m1-sym-3a/
+INCAR  KPOINTS  POSCAR
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO/Freeze_X1+-m1-sym-3a] % smodes-phonons decomposition --parent ../POSCAR --sub POSCAR --k_vector X
+Stoichiometry: sub structure is 2x the parent's own formula-unit count.
+Parent: space group 221 (Pm-3m), a=4.13455 b=4.13455 c=4.13455 alpha=90.000 beta=90.000 gamma=90.000
+Sub:    space group 123 (P4/mmm), a=4.13455 b=4.13455 c=8.26909 alpha=90.000 beta=90.000 gamma=90.000
+
+=== k = X ===
+arm 1 of 3 -- multi-arm irrep, matched against the sub structure's own lattice shape (not necessarily the SMODES-native arm)
+strain (relative to this k-vector's own resolved target lattice, rotation already factored out):
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+   0.000000   0.000000   0.000000
+det(F) = 1.000000
+total displacement norm: 0.010000 A
+parent-cell normalisation: this cell holds 2 primitive parent cell(s) -- divide any amplitude below by 1.41421 for the cell-size-independent value
+residual (unexplained by these irreps' own directions -- every swept/blended component's own fitted contribution, not just the native one): 0.000028 A (0.28%)
+
+  irrep      mode  species  degen  vector        As, per component (A)
+  X1+           0  Ba           3  0,0,0         (below noise floor)
+  X1+           1  O            3  0,0,a         a = 0.010000 A
+
+  X3-           0  Sn           3  0,0,0         (below noise floor)
+  X3-           1  O            3  0,0,0         (below noise floor)
+
+  X4-           0  O            3  0,0,0         (below noise floor)
+
+  X5+           0  Ba           6  0,0,0,0,0,0   (below noise floor)
+  X5+           1  O            6  0,0,0,0,0,0   (below noise floor)
+
+  X5-           0  Sn           6  0,0,0,0,0,0   (below noise floor)
+  X5-           1  O            6  0,0,0,0,0,0   (below noise floor)
+  X5-           2  O            6  0,0,0,0,0,0   (below noise floor)
+
+  how the positions in `vector` relate to each other:
+    native / (x,y,z)  a within-arm rotation -- a real symmetry operation of this
+                      arm's own cell maps one onto the other
+    armN / armNwM     a different star arm -- the same pattern propagating along
+                      another arm of the star, on its own differently-shaped cell
+                      (wM = a within-arm rotation on that arm)
+
+per-direction totals (sqrt of summed squared amplitude across every mode of that irrep -- shows whether a distortion is equally split across several directions, e.g. an (a,a,a)-type body-diagonal case, at a glance):
+  Two normalisations, matching ISODISTORT's own two columns: As is the norm over the resolved supercell (cell-size dependent); Ap is per primitive parent cell (cell-size independent). 'all components' is the whole order parameter at once -- the row directly comparable to ISODISTORT's per-irrep 'all' line.
+  irrep      direction             As (A)       Ap (A)
+  X1+        a;0;0               0.000000     0.000000   [native]
+  X1+        0;a;0               0.000000     0.000000   [arm2]
+  X1+        0;0;a               0.010000     0.007071   [arm3]
+  X1+        all components      0.010000     0.007071
+  X5+        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5+        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5+        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5+        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5+        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5+        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5+        all components      0.000000     0.000000
+  X3-        a;0;0               0.000000     0.000000   [native]
+  X3-        0;a;0               0.000000     0.000000   [arm2]
+  X3-        0;0;a               0.000000     0.000000   [arm3]
+  X3-        all components      0.000000     0.000000
+  X4-        a;0;0               0.000000     0.000000   [native]
+  X4-        0;a;0               0.000000     0.000000   [arm2]
+  X4-        0;0;a               0.000000     0.000000   [arm3]
+  X4-        all components      0.000000     0.000000
+  X5-        a,0;0,0;0,0         0.000000     0.000000   [native]
+  X5-        0,a;0,0;0,0         0.000000     0.000000   [within]
+  X5-        0,0;a,0;0,0         0.000000     0.000000   [arm2]
+  X5-        0,0;0,a;0,0         0.000000     0.000000   [within(arm2)]
+  X5-        0,0;0,0;a,0         0.000000     0.000000   [arm3]
+  X5-        0,0;0,0;0,a         0.000000     0.000000   [within(arm3)]
+  X5-        all components      0.000000     0.000000
+Wrote decomposition_mode_X
+Wrote decomposition_summary
+
+Summary: irreps with meaningful contribution
+  X1+        (k=X)  0,0,a         0.010000 A

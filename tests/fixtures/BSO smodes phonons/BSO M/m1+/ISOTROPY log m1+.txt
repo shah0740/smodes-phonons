@@ -1,0 +1,11 @@
+ISOTROPY
+*v par 221
+*v ir m1+
+*sh sub
+*sh dir vec
+*d iso
+Subgroup   Dir 
+123 P4/mmm P1  (a;0;0)
+229 Im-3m  P3  (a;a;a)
+139 I4/mmm C2  (a;b;a)
+71 Immm    S1  (a;b;c)

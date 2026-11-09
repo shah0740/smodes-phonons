@@ -1,0 +1,57 @@
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test_BSO] % cat M/Irrep_M2-/opd.txt
+Irrep M2- (k-point M) -- 1 mode(s), degeneracy 3, on this irrep's own cell
+
+Every direction below is a real, physically realisable distortion of this
+crystal. SMODES itself only ever prints ONE of them per mode (its own
+`native` direction); the rest are constructed here by applying the crystal's
+own verified symmetry operations to that pattern.
+
+No DFT data is involved -- this is pure symmetry, available before any
+calculation is run. Use a position's own `--direction` string to freeze or
+decompose along it.
+
+Order-parameter directions for M2-, mode 0
+
+  degeneracy    3  =  3 star arm(s) x 1 within-arm direction(s)
+  cell          40 atoms
+  basis         complete, conditioning 1
+
+  a  --direction a;0;0   [arm 1, native]
+       SMODES's own printed pattern for this mode
+  b  --direction 0;a;0   [arm 2, arm2]
+       star arm 2 -- reached by a crystal symmetry operation (a rotation, or a centring translation)
+  c  --direction 0;0;a   [arm 3, arm3]
+       star arm 3 -- reached by a crystal symmetry operation (a rotation, or a centring translation)
+
+  Positions sharing a star arm sit on the same cell -- a rotation of the pattern, nothing structural changes. Positions on different arms are genuinely different star members. Semicolons in --direction separate arms.
+  A letter names a direction, never the mechanism that found it: --direction is written the same way whether a position came from a rotation, a centring translation, a Bloch phase shift, or orbit completion.
+
+  Position a (native) -- displacement per atom:
+    Ba   0.000000   0.000000   0.353553
+    Ba   0.000000   0.000000  -0.353553
+    Ba   0.000000   0.000000   0.353553
+    Ba   0.000000   0.000000  -0.353553
+    Ba   0.000000   0.000000   0.353553
+    Ba   0.000000   0.000000  -0.353553
+    Ba   0.000000   0.000000   0.353553
+    Ba   0.000000   0.000000  -0.353553
+
+  Position b (arm2) -- displacement per atom:
+    Ba  -0.000000  -0.353553  -0.000000
+    Ba  -0.000000  -0.353553  -0.000000
+    Ba   0.000000   0.353553   0.000000
+    Ba   0.000000   0.353553   0.000000
+    Ba   0.000000   0.353553   0.000000
+    Ba   0.000000   0.353553   0.000000
+    Ba  -0.000000  -0.353553  -0.000000
+    Ba  -0.000000  -0.353553  -0.000000
+
+  Position c (arm3) -- displacement per atom:
+    Ba  -0.353553   0.000000  -0.000000
+    Ba   0.353553   0.000000   0.000000
+    Ba   0.353553   0.000000   0.000000
+    Ba  -0.353553   0.000000  -0.000000
+    Ba   0.353553   0.000000   0.000000
+    Ba  -0.353553   0.000000  -0.000000
+    Ba  -0.353553   0.000000  -0.000000
+    Ba   0.353553   0.000000   0.000000

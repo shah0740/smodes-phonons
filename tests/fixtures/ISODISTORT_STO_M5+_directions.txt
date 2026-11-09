@@ -1,0 +1,24 @@
+ISODISTORT: order parameter direction
+Space Group: 221 Pm-3m Oh-1, Lattice parameters: a= 4.00000, b= 4.00000, c= 4.00000, alpha= 90.00000, beta= 90.00000, gamma= 90.00000
+Default space-group preferences: monoclinic axes a(b)c, monoclinic cell choice 1, orthorhombic axes abc, origin choice 2, hexagonal axes, SSG standard setting
+Sr1 1a (0,0,0), Ti1 1b (1/2,1/2,1/2), O1 3c (0,1/2,1/2)
+Include strain, displacive ALL distortions
+k point: M, k11 (1/2,1/2,0)
+IR: M5+, k11t9
+
+
+Finish selecting the distortion mode by choosing an order parameter direction 
+P1 (a,0;0,0;0,a) 140 I4/mcm, basis={(2,0,0),(0,0,2),(0,-2,0)}, origin=(1/2,1/2,1/2), s=4, i=12, k-active= (1/2,1/2,0),(0,1/2,1/2)
+P2 (a,0;0,0;0,0) 67 Cmma, basis={(2,0,0),(0,2,0),(0,0,1)}, origin=(0,0,0), s=2, i=12, k-active= (1/2,1/2,0)
+P6 (a,a;-a,a;a,a) 166 R-3m, basis={(-2,0,2),(0,-2,-2),(1,-1,1)}, origin=(1/2,-1/2,-1/2), s=4, i=16, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)
+P9 (a,0;0,a;0,0) 140 I4/mcm, basis={(0,2,0),(0,0,2),(2,0,0)}, origin=(0,0,0), s=4, i=12, k-active= (1/2,1/2,0),(1/2,0,1/2)
+P10 (a,a;0,0;0,0) 53 Pmna, basis={(1,1,0),(0,0,1),(1,-1,0)}, origin=(0,0,0), s=2, i=12, k-active= (1/2,1/2,0)
+P11 (a,0;a,0;a,0) 206 Ia-3, basis={(0,0,-2),(0,-2,0),(-2,0,0)}, origin=(-1/2,-1/2,-1/2), s=4, i=8, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)
+C1 (a,0;0,0;0,b) 72 Ibam, basis={(2,0,0),(0,0,-2),(0,2,0)}, origin=(-1/2,1/2,-1/2), s=4, i=24, k-active= (1/2,1/2,0),(0,1/2,1/2)
+C12 (a,0;0,b;0,0) 72 Ibam, basis={(0,2,0),(0,0,2),(2,0,0)}, origin=(0,0,0), s=4, i=24, k-active= (1/2,1/2,0),(1/2,0,1/2)
+C13 (a,b;0,0;0,0) 13 P2/c, basis={(-1,1,0),(0,0,1),(2,0,0)}, origin=(0,0,0), s=2, i=24, k-active= (1/2,1/2,0)
+C23 (a,b;a,b;a,b) 148 R-3, basis={(-2,2,0),(2,0,-2),(-1,-1,-1)}, origin=(0,0,0), s=4, i=32, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)
+S12 (a,b;c,c;b,-a) 12 C2/m, basis={(0,-2,0),(2,0,2),(-1,1,1)}, origin=(1/2,-1/2,1/2), s=4, i=48, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)
+S15 (a,0;b,0;c,0) 73 Ibca, basis={(2,0,0),(0,0,-2),(0,2,0)}, origin=(-1/2,1/2,-1/2), s=4, i=24, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)
+4D3 (a,b;c,0;d,0) 15 C2/c, basis={(2,-2,0),(0,0,-2),(0,2,0)}, origin=(0,0,0), s=4, i=48, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)
+6D1 (a,b;c,d;e,f) 2 P-1, basis={(-1,1,1),(1,-1,1),(1,1,-1)}, origin=(0,0,0), s=4, i=96, k-active= (1/2,1/2,0),(1/2,0,1/2),(0,1/2,1/2)

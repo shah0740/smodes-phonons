@@ -1,0 +1,156 @@
+FINDSYM, Version 7.1.6, Oct 2023
+Written by Harold T. Stokes, Branton J. Campbell, and Dorian M. Hatch
+Brigham Young University
+
+CMO test
+
+Lattice parameters, a,b,c,alpha,beta,gamma:
+   3.72627   3.72627  19.05536  90.00000  90.00000  90.00000
+Centering: P
+Number of atoms in unit cell:
+   24
+Type of each atom:
+6*Ca 4*Mn 14*O 
+         Position                     
+    1 Ca  0.50000  0.50000 -0.00000  
+    2 Ca  0.50000  0.50000  0.18401  
+    3 Ca -0.00000 -0.00000  0.31599  
+    4 Ca -0.00000  0.00000  0.50000  
+    5 Ca  0.00000  0.00000  0.68401  
+    6 Ca  0.50000  0.50000  0.81599  
+    7 Mn  0.50000  0.50000  0.40030  
+    8 Mn  0.00000  0.00000  0.09970  
+    9 Mn -0.00000 -0.00000  0.90030  
+   10 Mn  0.50000  0.50000  0.59970  
+   11 O  -0.00000  0.00000 -0.00000  
+   12 O   0.50000  0.50000  0.30201  
+   13 O   0.00000  0.00000  0.19799  
+   14 O   0.00000  0.50000  0.40216  
+   15 O   0.50000  0.00000  0.40216  
+   16 O   0.50000 -0.00000  0.09784  
+   17 O  -0.00000  0.50000  0.09784  
+   18 O   0.50000  0.50000  0.50000  
+   19 O  -0.00000 -0.00000  0.80201  
+   20 O   0.50000  0.50000  0.69799  
+   21 O   0.50000  0.00000  0.90216  
+   22 O   0.00000  0.50000  0.90216  
+   23 O  -0.00000  0.50000  0.59784  
+   24 O   0.50000 -0.00000  0.59784  
+
+Tolerance of lattice:   0.00001
+Tolerance of atomic position:   0.00100
+Tolerance of occupation:   0.00100
+------------------------------------------
+Space Group: 139  D4h-17    I4/mmm    
+Origin at   -0.00000  -0.00000  -0.00000
+Vectors a,b,c:
+   1.00000   0.00000   0.00000
+   0.00000   1.00000   0.00000
+   0.00000  -0.00000   1.00000
+Values of a,b,c,alpha,beta,gamma:
+   3.72627   3.72627  19.05536  90.00000  90.00000  90.00000
+Ratio of new/old primtive cell volumes = 2
+Atomic positions and occupancies in terms of a,b,c:
+Wyckoff position b (Ca1)
+    1   0.00000   0.00000   0.50000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position e (Ca2), z = -0.31599
+    2   0.00000   0.00000   0.68401     1.00000
+    3   0.00000   0.00000   0.31599     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position e (Mn1), z = -0.09970
+    7   0.00000   0.00000   0.90030     1.00000
+    8   0.00000  -0.00000   0.09970     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position a (O1)
+   11   0.00000   0.00000   0.00000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position e (O2), z = -0.19799
+   12   0.00000   0.00000   0.80201     1.00000
+   13   0.00000   0.00000   0.19799     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position g (O3), z =  0.40216
+   14   0.00000   0.50000   0.40216     1.00000
+   16   0.50000   0.00000   0.09784     1.00000
+   15   0.50000   0.00000   0.40216     1.00000
+   17   0.00000   0.50000   0.09784     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+------------------------------------------
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a     3.7262729381
+_cell_length_b     3.7262729381
+_cell_length_c     19.0553604241
+_cell_angle_alpha  90.0000000000
+_cell_angle_beta   90.0000000000
+_cell_angle_gamma  90.0000000000
+_cell_volume       264.5857757539
+
+_symmetry_space_group_name_H-M "I 4/m 2/m 2/m"
+_symmetry_Int_Tables_number 139
+_space_group.reference_setting '139:-I 4 2'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 x,-y,-z
+3 -x,y,-z
+4 -x,-y,z
+5 -y,-x,-z
+6 -y,x,z
+7 y,-x,z
+8 y,x,-z
+9 -x,-y,-z
+10 -x,y,z
+11 x,-y,z
+12 x,y,-z
+13 y,x,z
+14 y,-x,-z
+15 -y,x,-z
+16 -y,-x,z
+17 x+1/2,y+1/2,z+1/2
+18 x+1/2,-y+1/2,-z+1/2
+19 -x+1/2,y+1/2,-z+1/2
+20 -x+1/2,-y+1/2,z+1/2
+21 -y+1/2,-x+1/2,-z+1/2
+22 -y+1/2,x+1/2,z+1/2
+23 y+1/2,-x+1/2,z+1/2
+24 y+1/2,x+1/2,-z+1/2
+25 -x+1/2,-y+1/2,-z+1/2
+26 -x+1/2,y+1/2,z+1/2
+27 x+1/2,-y+1/2,z+1/2
+28 x+1/2,y+1/2,-z+1/2
+29 y+1/2,x+1/2,z+1/2
+30 y+1/2,-x+1/2,-z+1/2
+31 -y+1/2,x+1/2,-z+1/2
+32 -y+1/2,-x+1/2,z+1/2
+
+loop_
+_atom_type_symbol
+Ca    
+Mn    
+O     
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+Ca1 Ca   2 b  0.0000000000  0.0000000000  0.5000000000  1.0000000000 0,0,0  
+Ca2 Ca   4 e  0.0000000000  0.0000000000  0.6840113188  1.0000000000 0,0,Dz 
+Mn1 Mn   4 e  0.0000000000  0.0000000000 -0.0997042350  1.0000000000 0,0,Dz 
+O1  O    2 a  0.0000000000  0.0000000000  0.0000000000  1.0000000000 0,0,0  
+O2  O    4 e  0.0000000000  0.0000000000  0.8020110572  1.0000000000 0,0,Dz 
+O3  O    8 g  0.0000000000  0.5000000000  0.4021556898  1.0000000000 0,0,Dz 
+
+# end of cif

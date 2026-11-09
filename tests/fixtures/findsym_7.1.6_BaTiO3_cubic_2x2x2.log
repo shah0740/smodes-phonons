@@ -1,0 +1,171 @@
+FINDSYM, Version 7.1.6, Oct 2023
+Written by Harold T. Stokes, Branton J. Campbell, and Dorian M. Hatch
+Brigham Young University
+
+BaTiO3 cubic 2x2x2
+
+Lattice parameters, a,b,c,alpha,beta,gamma:
+   7.98076   7.98076   7.98076  90.00000  90.00000  90.00000
+Centering: P
+Number of atoms in unit cell:
+   40
+Type of each atom:
+8*Ba 8*Ti 24*O 
+         Position                     
+    1 Ba  0.25000  0.25000  0.25000  
+    2 Ba  0.25000  0.25000  0.75000  
+    3 Ba  0.25000  0.75000  0.25000  
+    4 Ba  0.25000  0.75000  0.75000  
+    5 Ba  0.75000  0.25000  0.25000  
+    6 Ba  0.75000  0.25000  0.75000  
+    7 Ba  0.75000  0.75000  0.25000  
+    8 Ba  0.75000  0.75000  0.75000  
+    9 Ti  0.00000  0.00000  0.00000  
+   10 Ti  0.00000  0.00000  0.50000  
+   11 Ti  0.00000  0.50000  0.00000  
+   12 Ti  0.00000  0.50000  0.50000  
+   13 Ti  0.50000  0.00000  0.00000  
+   14 Ti  0.50000  0.00000  0.50000  
+   15 Ti  0.50000  0.50000  0.00000  
+   16 Ti  0.50000  0.50000  0.50000  
+   17 O   0.00000  0.25000  0.00000  
+   18 O   0.00000  0.25000  0.50000  
+   19 O   0.00000  0.75000  0.00000  
+   20 O   0.00000  0.75000  0.50000  
+   21 O   0.50000  0.25000  0.00000  
+   22 O   0.50000  0.25000  0.50000  
+   23 O   0.50000  0.75000  0.00000  
+   24 O   0.50000  0.75000  0.50000  
+   25 O   0.25000  0.00000  0.00000  
+   26 O   0.25000  0.00000  0.50000  
+   27 O   0.25000  0.50000  0.00000  
+   28 O   0.25000  0.50000  0.50000  
+   29 O   0.75000  0.00000  0.00000  
+   30 O   0.75000  0.00000  0.50000  
+   31 O   0.75000  0.50000  0.00000  
+   32 O   0.75000  0.50000  0.50000  
+   33 O   0.00000  0.00000  0.25000  
+   34 O   0.00000  0.00000  0.75000  
+   35 O   0.00000  0.50000  0.25000  
+   36 O   0.00000  0.50000  0.75000  
+   37 O   0.50000  0.00000  0.25000  
+   38 O   0.50000  0.00000  0.75000  
+   39 O   0.50000  0.50000  0.25000  
+   40 O   0.50000  0.50000  0.75000  
+
+Tolerance of lattice:   0.00001
+Tolerance of atomic position:   0.00100
+Tolerance of occupation:   0.00100
+------------------------------------------
+Space Group: 221  Oh-1      Pm-3m     
+Origin at   -0.00000  -0.00000  -0.00000
+Vectors a,b,c:
+   0.00000   0.00000  -0.50000
+   0.00000   0.50000   0.00000
+   0.50000   0.00000   0.00000
+Values of a,b,c,alpha,beta,gamma:
+   3.99038   3.99038   3.99038  90.00000  90.00000  90.00000
+Ratio of new/old primtive cell volumes = 8
+Atomic positions and occupancies in terms of a,b,c:
+Wyckoff position b (Ba1)
+    1   0.50000   0.50000   0.50000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position a (Ti1)
+    9   0.00000   0.00000   0.00000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position d (O1)
+   33   0.50000   0.00000   0.00000     1.00000
+   25   0.00000   0.00000   0.50000     1.00000
+   17   0.00000   0.50000   0.00000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a     3.9903792100
+_cell_length_b     3.9903792100
+_cell_length_c     3.9903792100
+_cell_angle_alpha  90.0000000000
+_cell_angle_beta   90.0000000000
+_cell_angle_gamma  90.0000000000
+_cell_volume       63.5393119047
+
+_symmetry_space_group_name_H-M "P 4/m -3 2/m"
+_symmetry_Int_Tables_number 221
+_space_group.reference_setting '221:-P 4 2 3'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 x,-y,-z
+3 -x,y,-z
+4 -x,-y,z
+5 y,z,x
+6 y,-z,-x
+7 -y,z,-x
+8 -y,-z,x
+9 z,x,y
+10 z,-x,-y
+11 -z,x,-y
+12 -z,-x,y
+13 -y,-x,-z
+14 -y,x,z
+15 y,-x,z
+16 y,x,-z
+17 -x,-z,-y
+18 -x,z,y
+19 x,-z,y
+20 x,z,-y
+21 -z,-y,-x
+22 -z,y,x
+23 z,-y,x
+24 z,y,-x
+25 -x,-y,-z
+26 -x,y,z
+27 x,-y,z
+28 x,y,-z
+29 -y,-z,-x
+30 -y,z,x
+31 y,-z,x
+32 y,z,-x
+33 -z,-x,-y
+34 -z,x,y
+35 z,-x,y
+36 z,x,-y
+37 y,x,z
+38 y,-x,-z
+39 -y,x,-z
+40 -y,-x,z
+41 x,z,y
+42 x,-z,-y
+43 -x,z,-y
+44 -x,-z,y
+45 z,y,x
+46 z,-y,-x
+47 -z,y,-x
+48 -z,-y,x
+
+loop_
+_atom_type_symbol
+Ba    
+Ti    
+O     
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+Ba1 Ba   1 b  0.5000000000  0.5000000000  0.5000000000  1.0000000000 0,0,0 
+Ti1 Ti   1 a  0.0000000000  0.0000000000  0.0000000000  1.0000000000 0,0,0 
+O1  O    3 d  0.5000000000  0.0000000000  0.0000000000  1.0000000000 0,0,0 
+
+# end of cif

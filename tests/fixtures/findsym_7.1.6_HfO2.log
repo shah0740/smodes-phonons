@@ -1,0 +1,105 @@
+FINDSYM, Version 7.1.6, Oct 2023
+Written by Harold T. Stokes, Branton J. Campbell, and Dorian M. Hatch
+Brigham Young University
+
+HfO2
+
+Lattice parameters, a,b,c,alpha,beta,gamma:
+   5.07681   5.15683   5.24524  90.00000  99.63562  90.00000
+Centering: P
+Number of atoms in unit cell:
+   12
+Type of each atom:
+4*Hf 8*O 
+         Position                     
+    1 Hf  0.72268  0.54272  0.29231  
+    2 Hf  0.27732  0.04272  0.20769  
+    3 Hf  0.27732  0.45728  0.70769  
+    4 Hf  0.72268  0.95728  0.79231  
+    5 O   0.55299  0.25823  0.01928  
+    6 O   0.44701  0.75823  0.48072  
+    7 O   0.44701  0.74177  0.98072  
+    8 O   0.55299  0.24177  0.51928  
+    9 O   0.92858  0.66232  0.65956  
+   10 O   0.07142  0.16232  0.84044  
+   11 O   0.07142  0.33768  0.34044  
+   12 O   0.92858  0.83768  0.15956  
+
+Tolerance of lattice:   0.01000
+Tolerance of atomic position:   0.01000
+Tolerance of occupation:   0.00100
+------------------------------------------
+Space Group:  14  C2h-5     P2_1/c    
+Origin at    0.00000   0.50000   0.50000
+Vectors a,b,c:
+   1.00000   0.00000   0.00000
+   0.00000   1.00000   0.00000
+   0.00000  -0.00000   1.00000
+Values of a,b,c,alpha,beta,gamma:
+   5.07681   5.15683   5.24524  90.00000  99.63562  90.00000
+Ratio of new/old primtive cell volumes = 1
+Atomic positions and occupancies in terms of a,b,c:
+Wyckoff position e (Hf1), x = -0.27732, y =  0.04272, z = -0.20769
+    1   0.72268   0.04272   0.79231     1.00000
+    3   0.27732   0.95728   0.20769     1.00000
+    2   0.27732   0.54272   0.70769     1.00000
+    4   0.72268   0.45728   0.29231     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position e (O1), x = -0.44701, y = -0.24177, z = -0.48072
+    5   0.55299   0.75823   0.51928     1.00000
+    7   0.44701   0.24177   0.48072     1.00000
+    6   0.44701   0.25823   0.98072     1.00000
+    8   0.55299   0.74177   0.01928     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position e (O2), x = -0.07142, y =  0.16232, z =  0.15956
+    9   0.92858   0.16232   0.15956     1.00000
+   11   0.07142   0.83768   0.84044     1.00000
+   10   0.07142   0.66232   0.34044     1.00000
+   12   0.92858   0.33768   0.65956     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a     5.0768109468
+_cell_length_b     5.1568275951
+_cell_length_c     5.2452369194
+_cell_angle_alpha  90.0000000000
+_cell_angle_beta   99.6356200000
+_cell_angle_gamma  90.0000000000
+_cell_volume       135.3842457037
+
+_symmetry_space_group_name_H-M "P 1 21/c 1"
+_symmetry_Int_Tables_number 14
+_space_group.reference_setting '014:-P 2ybc'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 -x,y+1/2,-z+1/2
+3 -x,-y,-z
+4 x,-y+1/2,z+1/2
+
+loop_
+_atom_type_symbol
+Hf    
+O     
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+Hf1 Hf   4 e  0.7226814061  0.0427215570  0.7923142021  1.0000000000 Dx,Dy,Dz 
+O1  O    4 e  0.5529904757  0.7582322535  0.5192805985  1.0000000000 Dx,Dy,Dz 
+O2  O    4 e -0.0714242521  0.1623174307  0.1595551409  1.0000000000 Dx,Dy,Dz 
+
+# end of cif

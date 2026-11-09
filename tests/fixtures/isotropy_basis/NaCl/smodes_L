@@ -1,0 +1,87 @@
+SMODES, version 1.2.5, September 2021
+Harold T. Stokes and Dorian M. Hatch
+Brigham Young University
+NaCl_findsym                                                                  
+Space Group:
+225 Fm-3m     
+Lattice Parameters (a,b,c,alpha,beta,gamma)
+   5.55836   5.55836   5.55836  90.00000  90.00000  90.00000
+Wyckoff position of each type of atom
+Na a                                                                          
+Cl b                                                                          
+***********************************************
+k vector L = (1/2,1/2,1/2)                        
+***********************************************
+Irrep L1+            
+Degeneracy:  4
+Total number of modes:   4
+Vectors defining superlattice
+  -5.55836  -2.77918  -2.77918
+  -2.77918  -2.77918  -5.55836
+  -2.77918  -5.55836  -2.77918
+atom  type   position
+  1   Na     0.00000   0.00000   0.00000
+  2   Na    -5.55836  -5.55836  -5.55836
+  3   Cl    -8.33754  -8.33754  -8.33754
+  4   Cl    -2.77918  -2.77918  -2.77918
+Symmetry modes:
+atom  type   displacement
+------------------------------------------
+  3   Cl     1.00000   1.00000   1.00000
+  4   Cl    -1.00000  -1.00000  -1.00000
+***********************************************
+Irrep L3+            
+Degeneracy:  8
+Total number of modes:   8
+Vectors defining superlattice
+   5.55836   2.77918   2.77918
+  -2.77918   0.00000   2.77918
+   2.77918  -2.77918   0.00000
+atom  type   position
+  1   Na     0.00000   0.00000   0.00000
+  2   Na     2.77918   0.00000   2.77918
+  3   Cl     5.55836   0.00000   2.77918
+  4   Cl     0.00000   0.00000   2.77918
+Symmetry modes:
+atom  type   displacement
+------------------------------------------
+  3   Cl    -0.00000   1.00000  -1.00000
+  4   Cl     0.00000  -1.00000   1.00000
+***********************************************
+Irrep L2-            
+Degeneracy:  4
+Total number of modes:   4
+Vectors defining superlattice
+  -5.55836  -2.77918  -2.77918
+  -2.77918  -2.77918  -5.55836
+  -2.77918  -5.55836  -2.77918
+atom  type   position
+  1   Na     0.00000   0.00000   0.00000
+  2   Na    -5.55836  -5.55836  -5.55836
+  3   Cl    -8.33754  -8.33754  -8.33754
+  4   Cl    -2.77918  -2.77918  -2.77918
+Symmetry modes:
+atom  type   displacement
+------------------------------------------
+  1   Na     1.00000   1.00000   1.00000
+  2   Na    -1.00000  -1.00000  -1.00000
+***********************************************
+Irrep L3-            
+Degeneracy:  8
+Total number of modes:   8
+Vectors defining superlattice
+   2.77918   2.77918   5.55836
+   0.00000   2.77918  -2.77918
+  -2.77918   0.00000   2.77918
+atom  type   position
+  1   Na     0.00000   0.00000   0.00000
+  2   Na     0.00000   2.77918   2.77918
+  3   Cl     0.00000   2.77918   5.55836
+  4   Cl     0.00000   2.77918   0.00000
+Symmetry modes:
+atom  type   displacement
+------------------------------------------
+  1   Na     1.00000  -1.00000   0.00000
+  2   Na    -1.00000   1.00000   0.00000
+***********************************************
+End of output

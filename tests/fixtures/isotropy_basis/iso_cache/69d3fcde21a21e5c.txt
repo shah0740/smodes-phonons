@@ -1,0 +1,35 @@
+Isotropy, Version 9.6.1, Jan 2022
+Harold T. Stokes, Dorian M. Hatch, and Branton J. Campbell
+Brigham Young University
+Current setting is International (new ed.) with conventional basis vectors.
+*****Element     Matrix
+(C6+|0,0,0)   0  0 -1
+              1  0  0
+              0  1  0
+             
+**Element      Matrix
+(C21'|0,0,0)   0  0  1
+               0  1  0
+               1  0  0
+              
+**Element   Matrix
+(I|0,0,0)   1  0  0
+            0  1  0
+            0  0  1
+           
+**Element   Matrix
+(E|1,0,0)  -1  0  0
+            0  1  0
+            0  0 -1
+           
+**Element   Matrix
+(E|0,1,0)   1  0  0
+            0 -1  0
+            0  0 -1
+           
+**Element   Matrix
+(E|0,0,1)  -1  0  0
+            0 -1  0
+            0  0 -1
+           
+*

@@ -1,0 +1,17 @@
+Isotropy, Version 9.6.1, Jan 2022
+Harold T. Stokes, Dorian M. Hatch, and Branton J. Campbell
+Brigham Young University
+Current setting is International (new ed.) with conventional basis vectors.
+*****Subgroup  Dir 
+121 I-42m P1  (a,0,a,0)
+122 I-42d P3  (a,0,0,0)
+12 C2/m   P4  (a,1.414a,a,0)
+15 C2/c   P11 (a,0.707a,0,0.707a)
+82 I-4    C1  (a,0,b,0)
+8 Cm      C2  (a,b,a,0)
+5 C2      C5  (a,b,0,0)
+9 Cc      C8  (a,b,0,b)
+5 C2      C10 (a+b,1.414b,a-b,1.414a)
+2 P-1     C11 (a+b,1.414b,-a+b,1.414a)
+1 P1      4D1 (a,b,c,d)
+*

@@ -1,0 +1,96 @@
+SMODES, version 1.2.5, September 2021
+Harold T. Stokes and Dorian M. Hatch
+Brigham Young University
+BaTiO3_ferroelectric_findsym                                                  
+Space Group:
+ 99 P4mm      
+Lattice Parameters (a,b,c,alpha,beta,gamma)
+   3.99038   3.99038   4.10266  90.00000  90.00000  90.00000
+Wyckoff position of each type of atom
+Ba b 0 0 -0.41746                                                             
+Ti a 0 0 0.10004                                                              
+O c 0 0 0.06422                                                               
+O a 0 0 -0.45103                                                              
+***********************************************
+k vector GM = (0,0,0)                             
+***********************************************
+Irrep GM1        A1  
+Degeneracy:  1
+Total number of modes:   4
+These include 1 translational modes
+IR active
+Raman active
+Vectors defining superlattice
+   3.99038   0.00000   0.00000
+   0.00000   3.99038   0.00000
+   0.00000   0.00000   4.10266
+atom  type   position
+  1   Ba     1.99519   1.99519   2.38996
+  2   Ti     0.00000   0.00000   0.41043
+  3   O      1.99519   0.00000   0.26347
+  4   O      0.00000   1.99519   0.26347
+  5   O      0.00000   0.00000   2.25224
+Symmetry modes:
+The following include 1 translational modes
+atom  type   displacement
+------------------------------------------
+  1   Ba     0.00000   0.00000   1.00000
+------------------------------------------
+  2   Ti     0.00000   0.00000   1.00000
+------------------------------------------
+  3   O      0.00000   0.00000   1.00000
+  4   O      0.00000   0.00000   1.00000
+------------------------------------------
+  5   O      0.00000   0.00000   1.00000
+***********************************************
+Irrep GM2        B1  
+Degeneracy:  1
+Total number of modes:   1
+Raman active
+Vectors defining superlattice
+   3.99038   0.00000   0.00000
+   0.00000   3.99038   0.00000
+   0.00000   0.00000   4.10266
+atom  type   position
+  1   Ba     1.99519   1.99519   2.38996
+  2   Ti     0.00000   0.00000   0.41043
+  3   O      1.99519   0.00000   0.26347
+  4   O      0.00000   1.99519   0.26347
+  5   O      0.00000   0.00000   2.25224
+Symmetry modes:
+atom  type   displacement
+------------------------------------------
+  3   O      0.00000   0.00000   1.00000
+  4   O     -0.00000  -0.00000  -1.00000
+***********************************************
+Irrep GM5        E   
+Degeneracy:  2
+Total number of modes:  10
+These include 2 translational modes
+IR active
+Raman active
+Vectors defining superlattice
+   0.00000   0.00000   4.10266
+   3.99038   0.00000   0.00000
+   0.00000   3.99038   0.00000
+atom  type   position
+  1   Ba     1.99519   1.99519   2.38996
+  2   Ti     0.00000   0.00000   0.41043
+  3   O      1.99519   0.00000   0.26347
+  4   O      0.00000   1.99519   0.26347
+  5   O      0.00000   0.00000   2.25224
+Symmetry modes:
+The following include 1 translational modes
+atom  type   displacement
+------------------------------------------
+  1   Ba     1.00000   0.00000   0.00000
+------------------------------------------
+  2   Ti     1.00000   0.00000   0.00000
+------------------------------------------
+  4   O      1.00000   0.00000   0.00000
+------------------------------------------
+  3   O      1.00000   0.00000   0.00000
+------------------------------------------
+  5   O      1.00000   0.00000   0.00000
+***********************************************
+End of output

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smodes-phonons"
+version = "2.0.0"
+description = "Symmetry-adapted frozen-phonon calculations driven by the ISOTROPY suite"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Jay Shah"}, {name = "Claude (Anthropic)"}]
+requires-python = ">=3.10"
+keywords = ["phonons", "symmetry", "ISOTROPY", "SMODES", "FINDSYM", "ISODISTORT", "DFT", "VASP", "order parameter", "phase transitions"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/shah0740/smodes-phonons"
+Documentation = "https://github.com/shah0740/smodes-phonons/tree/main/docs"
+
+[project.scripts]
+smodes-phonons = "smodes_phonons.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

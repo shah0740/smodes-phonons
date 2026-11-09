@@ -1,0 +1,129 @@
+FINDSYM, Version 7.1.6, Oct 2023
+Written by Harold T. Stokes, Branton J. Campbell, and Dorian M. Hatch
+Brigham Young University
+
+Ca4_Ti4_O12 structure
+
+Lattice parameters, a,b,c,alpha,beta,gamma:
+   5.33824   5.44564   7.59926  90.00000  90.00000  90.00000
+Centering: P
+Number of atoms in unit cell:
+   20
+Type of each atom:
+4*Ca 4*Ti 12*O 
+         Position                     
+    1 Ca  0.50972  0.54503  0.75000  
+    2 Ca  0.49028  0.45497  0.25000  
+    3 Ca  0.99028  0.04503  0.75000  
+    4 Ca  0.00972  0.95497  0.25000  
+    5 Ti  0.00000  0.50000  0.50000  
+    6 Ti  0.00000  0.50000 -0.00000  
+    7 Ti  0.50000 -0.00000  0.50000  
+    8 Ti  0.50000 -0.00000 -0.00000  
+    9 O   0.08027  0.47941  0.75000  
+   10 O   0.91973  0.52059  0.25000  
+   11 O   0.41973  0.97941  0.75000  
+   12 O   0.58027  0.02059  0.25000  
+   13 O   0.79205  0.79130  0.95779  
+   14 O   0.20795  0.20870  0.45779  
+   15 O   0.20795  0.20870  0.04221  
+   16 O   0.79205  0.79130  0.54221  
+   17 O   0.70795  0.29130  0.95779  
+   18 O   0.29205  0.70870  0.45779  
+   19 O   0.29205  0.70870  0.04221  
+   20 O   0.70795  0.29130  0.54221  
+
+Tolerance of lattice:   0.00001
+Tolerance of atomic position:   0.00100
+Tolerance of occupation:   0.00100
+------------------------------------------
+Space Group:  62  D2h-16    Pnma      
+Origin at    0.50000   0.50000   0.00000
+Vectors a,b,c:
+   0.00000   1.00000   0.00000
+  -0.00000  -0.00000   1.00000
+   1.00000   0.00000   0.00000
+Values of a,b,c,alpha,beta,gamma:
+   5.44564   7.59926   5.33824  90.00000  90.00000  90.00000
+Ratio of new/old primtive cell volumes = 1
+Atomic positions and occupancies in terms of a,b,c:
+Wyckoff position c (Ca1), x = -0.04503, z = -0.00972
+    2   0.95497   0.25000   0.99028     1.00000
+    1   0.04503   0.75000   0.00972     1.00000
+    3   0.54503   0.75000   0.49028     1.00000
+    4   0.45497   0.25000   0.50972     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position b (Ti1)
+    6   0.00000   0.00000   0.50000     1.00000
+    5   0.00000   0.50000   0.50000     1.00000
+    8   0.50000   0.00000   0.00000     1.00000
+    7   0.50000   0.50000   0.00000     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position c (O1), x =  0.02059, z =  0.41973
+   10   0.02059   0.25000   0.41973     1.00000
+    9   0.97941   0.75000   0.58027     1.00000
+   11   0.47941   0.75000   0.91973     1.00000
+   12   0.52059   0.25000   0.08027     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+Wyckoff position d (O2), x =  0.29130, y = -0.04221, z =  0.29205
+   13   0.29130   0.95779   0.29205     1.00000
+   15   0.70870   0.04221   0.70795     1.00000
+   14   0.70870   0.45779   0.70795     1.00000
+   20   0.79130   0.54221   0.20795     1.00000
+   17   0.79130   0.95779   0.20795     1.00000
+   19   0.20870   0.04221   0.79205     1.00000
+   18   0.20870   0.45779   0.79205     1.00000
+   16   0.29130   0.54221   0.29205     1.00000
+    RMS position shift  = 0.00000, MAX position shift  = 0.00000
+# CIF file created by FINDSYM, version 7.1.3
+
+data_findsym-output
+_audit_creation_method FINDSYM
+
+_cell_length_a     5.4456404896
+_cell_length_b     7.5992589871
+_cell_length_c     5.3382432376
+_cell_angle_alpha  90.0000000000
+_cell_angle_beta   90.0000000000
+_cell_angle_gamma  90.0000000000
+_cell_volume       220.9116253781
+
+_symmetry_space_group_name_H-M "P 21/n 21/m 21/a"
+_symmetry_Int_Tables_number 62
+_space_group.reference_setting '062:-P 2ac 2n'
+_space_group.transform_Pp_abc a,b,c;0,0,0
+
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 x+1/2,-y+1/2,-z+1/2
+3 -x,y+1/2,-z
+4 -x+1/2,-y,z+1/2
+5 -x,-y,-z
+6 -x+1/2,y+1/2,z+1/2
+7 x,-y+1/2,z
+8 x+1/2,y,-z+1/2
+
+loop_
+_atom_type_symbol
+Ca    
+Ti    
+O     
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+Ca1 Ca   4 c -0.0450287989  0.2500000000 -0.0097160520  1.0000000000 Dx,0,Dz  
+Ti1 Ti   4 b  0.0000000000  0.0000000000  0.5000000000  1.0000000000 0,0,0    
+O1  O    4 c  0.0205856915  0.2500000000  0.4197263035  1.0000000000 Dx,0,Dz  
+O2  O    8 d  0.2912989259 -0.0422059934  0.2920480591  1.0000000000 Dx,Dy,Dz 
+
+# end of cif

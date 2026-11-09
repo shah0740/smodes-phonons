@@ -1,0 +1,153 @@
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test/GM/Irrep_GM5-] % cat opd.txt
+Irrep GM5- (k-point GM) -- 1 mode(s), degeneracy 3, on this irrep's own cell
+
+Every direction below is a real, physically realisable distortion of this
+crystal. SMODES itself only ever prints ONE of them per mode (its own
+`native` direction); the rest are constructed here by applying the crystal's
+own verified symmetry operations to that pattern.
+
+No DFT data is involved -- this is pure symmetry, available before any
+calculation is run. Use a position's own `--direction` string to freeze or
+decompose along it.
+
+Order-parameter directions for GM5-, mode 0
+
+  degeneracy    3  =  1 star arm(s) x 3 within-arm direction(s)
+  cell          5 atoms
+  basis         complete, conditioning 1
+
+  a  --direction a,0,0   [arm 1, native]
+       SMODES's own printed pattern for this mode
+  b  --direction 0,a,0   [arm 1, within]
+       within-arm partner, from this arm's own little group
+  c  --direction 0,0,a   [arm 1, within]
+       within-arm partner, from this arm's own little group
+
+  A letter names a direction, never the mechanism that found it: --direction is written the same way whether a position came from a rotation, a centring translation, a Bloch phase shift, or orbit completion.
+
+  Position a (native) -- displacement per atom:
+     O   0.000000   0.000000  -0.707107
+     O   0.000000   0.000000   0.707107
+
+  Position b (within) -- displacement per atom:
+     O   0.000000   0.697526   0.000000
+     O   0.116004  -0.697526  -0.000000
+     O  -0.116004   0.000000  -0.000000
+
+  Position c (within) -- displacement per atom:
+     O  -0.000000  -0.116004   0.000000
+     O   0.697526   0.116004   0.000000
+     O  -0.697526   0.000000  -0.000000
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/test/GM/Irrep_GM5-] % cat ../Irrep_GM4-/opd.txt
+Irrep GM4- (k-point GM) -- 4 mode(s), degeneracy 3, on this irrep's own cell
+
+Every direction below is a real, physically realisable distortion of this
+crystal. SMODES itself only ever prints ONE of them per mode (its own
+`native` direction); the rest are constructed here by applying the crystal's
+own verified symmetry operations to that pattern.
+
+No DFT data is involved -- this is pure symmetry, available before any
+calculation is run. Use a position's own `--direction` string to freeze or
+decompose along it.
+
+Order-parameter directions for GM4-, mode 0
+
+  degeneracy    3  =  1 star arm(s) x 3 within-arm direction(s)
+  cell          5 atoms
+  basis         complete, conditioning 1
+
+  a  --direction a,0,0   [arm 1, native]
+       SMODES's own printed pattern for this mode
+  b  --direction 0,a,0   [arm 1, within]
+       within-arm partner, from this arm's own little group
+  c  --direction 0,0,a   [arm 1, within]
+       within-arm partner, from this arm's own little group
+
+  A letter names a direction, never the mechanism that found it: --direction is written the same way whether a position came from a rotation, a centring translation, a Bloch phase shift, or orbit completion.
+
+  Position a (native) -- displacement per atom:
+    Ba   1.000000   0.000000   0.000000
+
+  Position b (within) -- displacement per atom:
+    Ba   0.000000  -0.707107   0.707107
+
+  Position c (within) -- displacement per atom:
+    Ba   0.000000   0.707107   0.707107
+
+
+Order-parameter directions for GM4-, mode 1
+
+  degeneracy    3  =  1 star arm(s) x 3 within-arm direction(s)
+  cell          5 atoms
+  basis         complete, conditioning 1
+
+  a  --direction a,0,0   [arm 1, native]
+       SMODES's own printed pattern for this mode
+  b  --direction 0,a,0   [arm 1, within]
+       within-arm partner, from this arm's own little group
+  c  --direction 0,0,a   [arm 1, within]
+       within-arm partner, from this arm's own little group
+
+  A letter names a direction, never the mechanism that found it: --direction is written the same way whether a position came from a rotation, a centring translation, a Bloch phase shift, or orbit completion.
+
+  Position a (native) -- displacement per atom:
+    Sn   1.000000   0.000000   0.000000
+
+  Position b (within) -- displacement per atom:
+    Sn   0.000000   0.707107  -0.707107
+
+  Position c (within) -- displacement per atom:
+    Sn   0.000000  -0.707107  -0.707107
+
+
+Order-parameter directions for GM4-, mode 2
+
+  degeneracy    3  =  1 star arm(s) x 3 within-arm direction(s)
+  cell          5 atoms
+  basis         complete, conditioning 1
+
+  a  --direction a,0,0   [arm 1, native]
+       SMODES's own printed pattern for this mode
+  b  --direction 0,a,0   [arm 1, within]
+       within-arm partner, from this arm's own little group
+  c  --direction 0,0,a   [arm 1, within]
+       within-arm partner, from this arm's own little group
+
+  A letter names a direction, never the mechanism that found it: --direction is written the same way whether a position came from a rotation, a centring translation, a Bloch phase shift, or orbit completion.
+
+  Position a (native) -- displacement per atom:
+     O   1.000000   0.000000   0.000000
+
+  Position b (within) -- displacement per atom:
+     O   0.000000   0.000000  -1.000000
+
+  Position c (within) -- displacement per atom:
+     O   0.000000   1.000000   0.000000
+
+
+Order-parameter directions for GM4-, mode 3
+
+  degeneracy    3  =  1 star arm(s) x 3 within-arm direction(s)
+  cell          5 atoms
+  basis         complete, conditioning 1
+
+  a  --direction a,0,0   [arm 1, native]
+       SMODES's own printed pattern for this mode
+  b  --direction 0,a,0   [arm 1, within]
+       within-arm partner, from this arm's own little group
+  c  --direction 0,0,a   [arm 1, within]
+       within-arm partner, from this arm's own little group
+
+  A letter names a direction, never the mechanism that found it: --direction is written the same way whether a position came from a rotation, a centring translation, a Bloch phase shift, or orbit completion.
+
+  Position a (native) -- displacement per atom:
+     O   0.707107   0.000000   0.000000
+     O   0.707107   0.000000   0.000000
+
+  Position b (within) -- displacement per atom:
+     O   0.000000   0.707107  -0.000000
+     O   0.000000   0.707107   0.000000
+
+  Position c (within) -- displacement per atom:
+     O  -0.000000  -0.000000  -0.707107
+     O  -0.000000  -0.000000  -0.707107

@@ -1,0 +1,39 @@
+SYSTEM = Ca3Mn2O7
+
+# Electronic Convergence
+PREC = Accurate
+ENCUT = 550
+EDIFF = 1E-8
+GGA = PS
+
+# Smearing
+ISMEAR = 0
+SIGMA = 0.05
+
+# Magnetism (AFM alignment for 4 Mn atoms)
+ISPIN = 2
+MAGMOM = 6*0  3 -3 3 -3  14*0
+ISYM = 0
+SYMPREC = 1E-4
+
+# DFT+U Settings (Dudarev Scheme: U_eff = U - J = 4.5 - 1.0 = 3.5 eV)
+# Poscar Order: Ca (1), Mn (2), O (3)
+LDAU = .TRUE.
+LDAUTYPE = 2
+LDAUL = -1  2 -1
+LDAUU = 0.0 3.5 0.0
+LDAUJ = 0.0 0.0 0.0
+LMAXMIX=4
+LASPH = .TRUE.
+
+# Ionic Relaxation
+NSW = 0
+IBRION = -1
+ISIF = 3
+EDIFFG = -0.002
+POTIM = 0.5
+
+# Performance & Output
+NCORE = 4
+LWAVE = .FALSE.
+LCHARG = .FALSE.

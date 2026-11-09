@@ -1,0 +1,19 @@
+SYSTEM = STO
+
+! static, no ionic motion
+NSW    = 0
+IBRION = -1
+
+! DFPT: Born charges, dielectric tensor, piezoelectric constants
+LEPSILON = .TRUE.
+LPEAD    = .TRUE.
+
+ISMEAR = -5
+
+PREC  = Accurate
+ENCUT = 550
+EDIFF = 1e-8
+GGA   = PS
+LREAL = .FALSE.
+LWAVE = .FALSE.
+LCHARG = .FALSE.

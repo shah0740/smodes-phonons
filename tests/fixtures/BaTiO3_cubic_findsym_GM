@@ -1,0 +1,63 @@
+SMODES, version 1.2.5, September 2021
+Harold T. Stokes and Dorian M. Hatch
+Brigham Young University
+BTOc_findsym                                                                  
+Space Group:
+221 Pm-3m     
+Lattice Parameters (a,b,c,alpha,beta,gamma)
+   3.99038   3.99038   3.99038  90.00000  90.00000  90.00000
+Wyckoff position of each type of atom
+Ba b                                                                          
+Ti a                                                                          
+O d                                                                           
+***********************************************
+k vector GM = (0,0,0)                             
+***********************************************
+Irrep GM4-       T1u 
+Degeneracy:  3
+Total number of modes:  12
+These include 3 translational modes
+IR active
+Vectors defining superlattice
+   0.00000   3.99038   0.00000
+   0.00000   0.00000   3.99038
+   3.99038   0.00000   0.00000
+atom  type   position
+  1   Ba     1.99519   1.99519   1.99519
+  2   Ti     0.00000   0.00000   0.00000
+  3   O      1.99519   0.00000   0.00000
+  4   O      0.00000   0.00000   1.99519
+  5   O      0.00000   1.99519   0.00000
+Symmetry modes:
+The following include 1 translational modes
+atom  type   displacement
+------------------------------------------
+  1   Ba     1.00000   0.00000   0.00000
+------------------------------------------
+  2   Ti     1.00000   0.00000   0.00000
+------------------------------------------
+  3   O      1.00000   0.00000   0.00000
+------------------------------------------
+  4   O      1.00000   0.00000   0.00000
+  5   O      1.00000   0.00000   0.00000
+***********************************************
+Irrep GM5-       T2u 
+Degeneracy:  3
+Total number of modes:   3
+Vectors defining superlattice
+   0.00000   3.99038   0.00000
+  -3.99038   0.00000   0.00000
+   0.00000   0.00000   3.99038
+atom  type   position
+  1   Ba    -1.99519   1.99519   1.99519
+  2   Ti     0.00000   0.00000   0.00000
+  3   O     -1.99519   0.00000   0.00000
+  4   O      0.00000   0.00000   1.99519
+  5   O      0.00000   1.99519   0.00000
+Symmetry modes:
+atom  type   displacement
+------------------------------------------
+  3   O     -0.00000  -0.00000  -1.00000
+  5   O      0.00000   0.00000   1.00000
+***********************************************
+End of output

@@ -1,0 +1,26 @@
+INVARIANTS
+Space Group: 221 Pm-3m Oh-1
+Irrep 1: Point 1 in first Brillouin zone: GM, k1 (0,0,0)
+Irreducible Representation: GM4-, k1t
+Order Parameter: P1(1) (a,0,0) 99 P4mm C4v-1 , basis={(1,0,0),(0,1,0),(0,0,1)}, origin=(0,0,0)
+
+Irrep 2: Point 2 in first Brillouin zone: M, k5 (1/2,1/2,0)
+Irreducible Representation: M2-, k5t
+Order Parameter: P1(1) (b;0;0) 1 P1 C1-1 , basis={(1,0,0),(0,1,0),(0,0,1)}, origin=(0,0,0)
+
+Display invariant polynomials with degree 1 through degree 4
+
+Invariant Polynomials
+Degree 2
+
+a2
+
+b2
+
+Degree 4
+
+a4
+
+a2 b2
+
+b4

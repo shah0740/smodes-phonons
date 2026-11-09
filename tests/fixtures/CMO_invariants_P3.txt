@@ -1,0 +1,42 @@
+INVARIANTS
+Space Group: 139 I4/mmm D4h-17
+Irrep 1: Point 1 in first Brillouin zone: GM, k14 (0,0,0)
+Irreducible Representation: GM5-, k14t10
+Order Parameter: P1(1) (a,0) 44 Imm2 C2v-20 , basis={(0,1,0),(0,0,1),(1,0,0)}, origin=(0,0,0)
+
+Irrep 2: Point 2 in first Brillouin zone: X, k13 (1/2,1/2,0)
+Irreducible Representation: X2+, k13t7
+Order Parameter: P3(1) (b;0) 64 Cmca D2h-18 , basis={(0,0,1),(1,-1,0),(1,1,0)}, origin=(0,0,0)
+
+Irrep 3: Point 3 in first Brillouin zone: X, k13 (1/2,1/2,0)
+Irreducible Representation: X3-, k13t4
+Order Parameter: P3(1) (c;0) 63 Cmcm D2h-17 , basis={(0,0,1),(1,-1,0),(1,1,0)}, origin=(0,1/2,1/2)
+
+Display invariant polynomials with degree 1 through degree 4
+
+Invariant Polynomials
+Degree 2
+
+a2
+
+b2
+
+c2
+
+Degree 3
+
+a b c
+
+Degree 4
+
+a4
+
+a2 b2
+
+b4
+
+a2 c2
+
+b2 c2
+
+c4

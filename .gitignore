@@ -1,0 +1,74 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+pip-wheel-metadata/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Type checkers / linters
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+.env.*
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local tool settings
+.claude/
+
+# auto-generated findsym/smodes caches from CLI runs in the repo root.
+# A PATTERN, not a list of names: this was six specific filenames, and every
+# new material or sweep leaked another one (a single coupled-freeze sweep
+# added BaTiO3_findsym, CMO_findsym, HfO2_findsym, STO_findsym, TiO2_findsym
+# and graphite_findsym). The tag is material-derived, so the set is open.
+/*_findsym
+/*_smodes_*
+/findsym.log
+/findsym.cif
+
+# Logs the ISOTROPY binaries write into whatever directory they are invoked
+# from. `run_findsym`/`run_iso` use a temp cwd so the package never creates
+# these, but a manual run in the repository root would -- and an `iso.log`
+# reached a commit that way once already.
+findsym.log
+findsym.cif
+iso.log
+# ...except the saved logs the tests read.
+!tests/fixtures/**/findsym.log
+!tests/fixtures/**/findsym.cif
+
+# macOS
+.DS_Store

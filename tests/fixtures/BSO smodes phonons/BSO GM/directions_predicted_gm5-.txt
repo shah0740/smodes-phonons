@@ -1,0 +1,19 @@
+(smodes) shah0740@ahl02 [~/DFT/SMODES_PHONONS/Software/Testing/STO/Irrep_GM5-] % cat directions_predicted.txt
+Direction basis for Irrep_GM5- (degeneracy 3) -- symmetry-only prediction computed at `irrep` time, before any DFT data exists (no frequencies yet):
+
+Position 1: direction (-0.0, -0.0, -1.0), arm 1 (native) -- Directions_predicted/Cell_1/POSCAR_superlattice
+Position 2: direction (0.0, -1.0, 0.0), arm 1 (native) -- Directions_predicted/Cell_1/POSCAR_superlattice
+Position 3: direction (-1.0, 0.0, 0.0), arm 1 (native) -- Directions_predicted/Cell_1/POSCAR_superlattice
+
+Positions sharing an arm share the SAME cell -- a pure rotation of the pattern on that cell's own POSCAR_superlattice, nothing structural changes. Positions on different arms need their own cell (a genuinely different star arm, see `star GM5-`).
+
+Mode 0:
+  Position 1 (arm 1):
+     O   0.000000   0.000000  -0.707107
+     O   0.000000   0.000000   0.707107
+  Position 2 (arm 1):
+     O   0.000000  -0.707107   0.000000
+     O   0.000000   0.707107   0.000000
+  Position 3 (arm 1):
+     O   0.707107   0.000000   0.000000
+     O  -0.707107   0.000000   0.000000

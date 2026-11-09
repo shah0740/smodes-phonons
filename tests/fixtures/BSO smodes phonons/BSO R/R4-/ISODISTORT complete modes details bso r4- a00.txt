@@ -1,0 +1,60 @@
+ISODISTORT: complete modes details
+
+Parent structure (221 Pm-3m)
+a=4.13455, b=4.13455, c=4.13455, alpha=90.00000, beta=90.00000, gamma=90.00000
+atom site    x         y         z         occ   
+Ba1  1b     0.50000   0.50000   0.50000   1.00000
+Sn1  1a     0.00000   0.00000   0.00000   1.00000
+O1   3d     0.50000   0.00000   0.00000   1.00000
+
+Subgroup details
+139 I4/mmm, basis={(1,1,0),(-1,1,0),(0,0,2)}, origin=(0,0,1/2), s=2, i=6
+
+Undistorted superstructure 
+a=5.84713, b=5.84713, c=8.26909, alpha=90.00000, beta=90.00000, gamma=90.00000
+atom site    x         y         z         occ      displ  
+Ba1  4c     0.00000   0.50000   0.00000   1.00000   0.00000  
+Sn1  4e     0.00000   0.00000   0.75000   1.00000   0.00000  
+O1   8f     0.25000   0.25000   0.25000   1.00000   0.00000  
+O2   2a     0.00000   0.00000   0.00000   1.00000   0.00000  
+O3   2b     0.00000   0.00000   0.50000   1.00000   0.00000  
+
+Distorted superstructure 
+a=5.84713, b=5.84713, c=8.26909, alpha=90.00000, beta=90.00000, gamma=90.00000
+atom site    x         y         z         occ      displ  
+Ba1  4c     0.00000   0.50000   0.00000   1.00000   0.00000  
+Sn1  4e     0.00000   0.00000   0.75043   1.00000   0.00356  
+O1   8f     0.25000   0.25000   0.25000   1.00000   0.00000  
+O2   2a     0.00000   0.00000   0.00000   1.00000   0.00000  
+O3   2b     0.00000   0.00000   0.50000   1.00000   0.00000  
+
+Displacive mode definitions
+
+atom    x        y        z        dx      dy      dz   
+Pm-3m[1/2,1/2,1/2]R4-(a,0,0)[Sn1:a:dsp]T1u(a) normfactor =  0.08551
+Sn1   0.00000  0.00000  0.75000  0.0000  0.0000  1.0000 
+      0.00000  0.00000  0.25000  0.0000  0.0000 -1.0000 
+      0.50000  0.50000  0.75000  0.0000  0.0000 -1.0000 
+      0.50000  0.50000  0.25000  0.0000  0.0000  1.0000 
+
+Displacive mode amplitudes
+
+mode                                        As        Ap       dmax
+[1/2,1/2,1/2]R4-(a,0,0)[Sn1:a:dsp]T1u(a)   0.00503   0.00356   0.00356
+[1/2,1/2,1/2]R4-(a,0,0)  all               0.00503   0.00356
+
+Overall                                    0.00503   0.00356
+
+Parent-cell strain mode definitions
+
+    e1      e2      e3      e4      e5      e6
+Pm-3m[0,0,0]GM1+(a)strain(a) normfactor =  0.57735
+  1.0000  1.0000  1.0000  0.0000  0.0000  0.0000
+Pm-3m[0,0,0]GM3+(a,0)strain(a) normfactor =  0.81650
+ -0.5000 -0.5000  1.0000 -0.0000 -0.0000 -0.0000
+
+Parent-cell strain mode amplitudes
+
+mode                       amplitude
+[0,0,0]GM1+(a)strain(a)     0.00000
+[0,0,0]GM3+(a,0)strain(a)   0.00000
