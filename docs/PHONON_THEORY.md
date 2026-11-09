@@ -152,7 +152,7 @@ wavevectors for electronic states and phonons.
 
 The eigenvalues of $\mathbf{D}(\mathbf{q})$ are the squared frequencies of
 each phonon mode, and their displacements are defined by $\tilde{e}$. Since
-the units of $\tilde{e}$ are length x mass$^{1/2}$, the true displacements
+the units of $\tilde{e}$ are $\text{length} \times \text{mass}^{1/2}$, the true displacements
 require a division by the square root of the atomic mass. The eigenvalues can
 take positive or negative values, which means phonon frequencies can take
 real or imaginary values. Imaginary phonon modes indicate the system is
