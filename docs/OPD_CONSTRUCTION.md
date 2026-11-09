@@ -24,9 +24,9 @@ would generate them are not in the findsym or SMODES output.
 smodes-phonons constructs every component with the projection (transfer)
 operator of group theory:
 
-$$
+```math
 \mathbf{w}_j \;=\; \frac{d}{|G|}\sum_{g\in G} D_{jk}(g)\;\big(g\cdot\mathbf{s}\big)
-$$
+```
 
 | symbol | meaning |
 |---|---|
