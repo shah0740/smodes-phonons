@@ -63,87 +63,87 @@ Using the Born-Oppenheimer (adiabatic) approximation a mathematical framework
 for phonons will be established [1]. The Hamiltonian of a periodic crystal as
 a function of atomic displacements from their equilibrium positions is:
 
-$$
+```math
 \hat{H} = \Phi_0
 + \frac{1}{2}\sum_{i}\sum_{N\nu} M_\nu\,\dot{U}_i(N\nu)^2
 + \frac{1}{2}\sum_{ij}\sum_{MN\mu\nu} \Phi_{ij}\!\begin{pmatrix}M & N\\ \mu & \nu\end{pmatrix} U_i(M\mu)\,U_j(N\nu)
 + \frac{1}{3!}\sum_{ijk}\sum_{MNP\mu\nu\pi} \Phi_{ijk}\!\begin{pmatrix}M & N & P\\ \mu & \nu & \pi\end{pmatrix} U_i(M\mu)\,U_j(N\nu)\,U_k(P\pi)
 + \cdots
 \tag{2.1}
-$$
+```
 
 The first term $\Phi_0$ is the ground-state electronic energy when there are
 no atomic displacements, and the second term is the kinetic energy due to
 nuclear motion. $M$, $N$ and $P$ are unit cell indices, $\mu$, $\nu$ and
 $\pi$ are atomic indices, and $i$, $j$ and $k$ are Cartesian directions.
 $U_i(M\mu)$ refers to the displacement of atom $\mu$ in unit cell $M$ in
-direction $i$, $\Phi_{ij}\begin{pmatrix}M & N\\ \mu & \nu\end{pmatrix}$ is
+direction $i$, $`\Phi_{ij}\begin{pmatrix}M & N\\ \mu & \nu\end{pmatrix}`$ is
 the second order force constant that couples displacements $U_i(M\mu)$ and
 $U_j(N\nu)$ to energy, and
-$\Phi_{ijk}\begin{pmatrix}M & N & P\\ \mu & \nu & \pi\end{pmatrix}$ is the
+$`\Phi_{ijk}\begin{pmatrix}M & N & P\\ \mu & \nu & \pi\end{pmatrix}`$ is the
 third order coefficient. If the expansion is truncated to second order in
 atomic displacements, the potential energy of the crystal is given by:
 
-$$
+```math
 F = \frac{1}{2}\sum_{ij}\sum_{MN\mu\nu} \Phi_{ij}\!\begin{pmatrix}M & N\\ \mu & \nu\end{pmatrix} U_i(M\mu)\,U_j(N\nu).
 \tag{2.2}
-$$
+```
 
 Force can be found by differentiating the potential energy with respect to
 displacement. Next, we assume solutions to the Hamiltonian are traveling
 waves with reciprocal lattice wavevector $\mathbf{k}$ and frequency $\omega$
 such that:
 
-$$
+```math
 U_i(M\mu) = \tilde{U}_i(M\mu)\,\exp\!\big(i\mathbf{k}\cdot\mathbf{r}(M\mu) - i\omega t\big)
 \tag{2.3}
-$$
+```
 
 The above expression can be differentiated twice with respect to time to find
 acceleration. And by using Newton's second law force = mass x acceleration,
 we obtain the following expression for force on atom $(N\nu)$ in the
 $j^{\text{th}}$ direction:
 
-$$
+```math
 \frac{\partial F}{\partial U_j(N\nu)}
 = \sum_{Mi\mu} \Phi_{ij}\!\begin{pmatrix}M & N\\ \mu & \nu\end{pmatrix} U_i(M\mu)
 = m_\nu\,\omega^2\,\tilde{U}_{j\nu}\,\exp\!\big(i\mathbf{k}\cdot\mathbf{r}(N\nu) - i\omega t\big)
 \tag{2.4}
-$$
+```
 
 where $m_\nu$ is the mass of atom $(N\nu)$. Next using Bloch's theorem, and
 defining a new index $L = M - N$, and performing some algebra, we get the
 expression:
 
-$$
+```math
 \omega^2\,\tilde{e}_{j\nu}
 = \sum_{Li\mu} \frac{\Phi_{ij}\!\begin{pmatrix}L & 0\\ \mu & \nu\end{pmatrix}}{\sqrt{m_\nu m_\mu}}
 \exp\!\big(i\mathbf{k}\cdot[\mathbf{r}(L\mu) - \mathbf{r}(0\nu)]\big)\,\tilde{e}_{i\mu}
 \tag{2.5}
-$$
+```
 
-where $\tilde{e}_{j\nu} = m_\nu^{1/2}\,\tilde{U}_{j\nu}$. We define the
+where $`\tilde{e}_{j\nu} = m_\nu^{1/2}\,\tilde{U}_{j\nu}`$. We define the
 dynamical matrix $\mathbf{D}(\mathbf{k})$:
 
-$$
+```math
 D(\mathbf{k})_{i\mu,j\nu}
 = \sum_{L} \frac{\Phi_{ij}\!\begin{pmatrix}L & 0\\ \mu & \nu\end{pmatrix}}{\sqrt{m_\nu m_\mu}}
 \exp\!\big(i\mathbf{k}\cdot[\mathbf{r}(L\mu) - \mathbf{r}(0\nu)]\big).
 \tag{2.6}
-$$
+```
 
 The dynamical matrix satisfies the eigenvalue problem, where
-$\tilde{e}_{j\nu} = m_\nu^{1/2}\,\tilde{U}_{j\nu}$:
+$`\tilde{e}_{j\nu} = m_\nu^{1/2}\,\tilde{U}_{j\nu}`$:
 
-$$
+```math
 \omega^2\,\tilde{e}_{j\nu} = \sum_{i\mu} D(\mathbf{k})_{i\mu,j\nu}\,\tilde{e}_{i\mu}
 \tag{2.7}
-$$
+```
 
-$$
+```math
 \omega^2\,\tilde{\mathbf{e}} = \mathbf{D}(\mathbf{q})\,\tilde{\mathbf{e}}
 \tag{2.8}
-$$
+```
 
 where we have collapsed the atomic indices and Cartesian directions into a
 single compound index with a size 3 times the number of atoms in the unit
@@ -160,31 +160,31 @@ dynamically unstable due to a displacement corresponding to that phonon mode.
 To solve for the phonon modes, the dynamical matrix needs to be calculated. To
 do so, a force constant matrix $\mathbf{F}(\mathbf{k})$ is defined:
 
-$$
+```math
 F(\mathbf{k})_{i\mu,j\nu} \equiv
 \frac{\Phi_{ij}\!\begin{pmatrix}L & 0\\ \mu & \nu\end{pmatrix}}{\sqrt{m_\nu m_\mu}}
 \exp\!\big(i\mathbf{k}\cdot[\mathbf{r}(L\mu) - \mathbf{r}(0\nu)]\big)
 \tag{2.9}
-$$
+```
 
-$$
+```math
 F(\mathbf{k})_{i\mu,j\nu} = m_\nu^{1/2}\,D(\mathbf{k})_{i\mu,j\nu}\,m_\mu^{1/2}
 \tag{2.10}
-$$
+```
 
-$$
+```math
 \mathbf{F}(\mathbf{q}) = \mathbf{M}^{1/2}\,\mathbf{D}(\mathbf{q})\,\mathbf{M}^{1/2}.
 \tag{2.11}
-$$
+```
 
 Phonon modes are computed by first calculating the dynamical matrix from the
 force constant matrix. The force constant matrix is calculated using the
 finite differences method:
 
-$$
+```math
 \frac{\partial^2 E}{\partial U_j(N\nu)\,\partial U_i(M\mu)} = -\frac{\partial F}{\partial U_j(N\nu)}
 \tag{2.12}
-$$
+```
 
 where finite differences of forces equal the second order derivatives of total
 energy with respect to atomic position, calculated using DFT. There will be
