@@ -127,7 +127,7 @@ irrep and what each `--direction` position is.
 | [`docs/TUTORIAL.md`](docs/TUTORIAL.md) | a complete worked example: the ferroelectric soft mode of SrTiO3 |
 | [`docs/COMMANDS.md`](docs/COMMANDS.md) | every command and flag |
 | [`docs/OPD_CONSTRUCTION.md`](docs/OPD_CONSTRUCTION.md) | how order-parameter directions are calculated, and comparing with ISODISTORT |
-| [`docs/PHONON_THEORY.md`](docs/PHONON_THEORY.md) | phonons and phonon symmetry: the theory behind the method (Jay Shah) |
+| [`docs/PHONON_THEORY.pdf`](docs/PHONON_THEORY.pdf) | phonons and phonon symmetry: the theory behind the method (Jay Shah); LaTeX source in `docs/PHONON_THEORY.tex` |
 
 ## Citing
 
@@ -145,7 +145,7 @@ citation requests):
 
 ## Authors
 
-Jay Shah (design, physics, validation; `legacy/` and `docs/PHONON_THEORY.md`).
+Jay Shah (design, physics, validation; `legacy/` and `docs/PHONON_THEORY.pdf`).
 The code, tests and the other documentation were written with Claude
 (Anthropic), which also wrote this README.
 

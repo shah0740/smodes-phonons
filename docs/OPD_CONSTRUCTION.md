@@ -162,4 +162,4 @@ Before release the construction was checked against independent data:
 - B. J. Campbell, H. T. Stokes, D. E. Tanner and D. M. Hatch, "ISODISPLACE: a
   web-based tool for exploring structural distortions", J. Appl. Cryst. 39,
   607 (2006).
-- `docs/PHONON_THEORY.md` for the phonon and group-theory background.
+- `docs/PHONON_THEORY.pdf` for the phonon and group-theory background.
