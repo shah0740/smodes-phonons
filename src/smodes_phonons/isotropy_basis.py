@@ -995,16 +995,36 @@ def _renormalised(W: np.ndarray) -> np.ndarray:
     return W / np.linalg.norm(W.reshape(W.shape[0], -1), axis=1)[:, None, None]
 
 
+def _lattice_rotations(lattice: np.ndarray) -> list:
+    """Every non-identity integer W (entries -1..1) mapping `lattice` onto itself
+    -- fractional rows go to `f @ W.T` -- with its Cartesian rotation
+    `inv(lattice) @ W.T @ lattice` (Cartesian rows go to `x @ rotation`).
+    Proper rotations first: an improper one turns a chiral structure into its
+    mirror image, which only the projection test could then reject."""
+    metric = lattice @ lattice.T
+    found = []
+    for entries in itertools.product((-1, 0, 1), repeat=9):
+        W = np.array(entries, dtype=float).reshape(3, 3)
+        det = round(float(np.linalg.det(W)))
+        if abs(det) != 1 or np.array_equal(W, np.eye(3)):
+            continue
+        if not np.allclose(W @ metric @ W.T, metric, atol=1e-3 * np.abs(metric).max()):
+            continue
+        found.append((-det, W, np.linalg.inv(lattice) @ W.T @ lattice))
+    found.sort(key=lambda item: item[0])
+    return [(W, rotation) for _d, W, rotation in found]
+
+
 def _project_seeds(rep, reference, parent, multipliers, tiled, seeds, origin, label) -> list:
     elements = None
     failures = []
-    for perm in _seed_placements(reference, tiled, multipliers, origin):
+    for perm, rotation in _seed_placements(reference, tiled, multipliers, origin):
         if elements is None:
             elements = group_elements(rep, reference, parent, multipliers)
         try:
             out = []
             for seed_index, seed in enumerate(seeds):
-                W, _k = project(np.asarray(seed)[perm], elements, rep.dimension)
+                W, _k = project((np.asarray(seed) @ rotation)[perm], elements, rep.dimension)
                 _check_representation(W, rep, reference, parent, multipliers, label, seed_index)
                 out.append(W)
             return out
@@ -1014,13 +1034,24 @@ def _project_seeds(rep, reference, parent, multipliers, tiled, seeds, origin, la
 
 
 def _seed_placements(reference: Structure, tiled: Structure, multipliers, origin):
-    """Atom permutations placing SMODES's tiled cell (standard-setting origin)
-    on `reference` (POSCAR origin). First the exact one, shifting by ISOTROPY's
+    """(atom permutation, Cartesian rotation) pairs placing SMODES's tiled cell
+    (standard-setting origin) on `reference` (POSCAR origin); a seed goes over
+    as `(seed @ rotation)[perm]`. First the exact one, shifting by ISOTROPY's
     origin; then whatever a free translation search finds. A free search alone
     can land on a translation that maps the structure onto itself without
     being a symmetry -- which would put the seed in the wrong irrep or swap
     which Wyckoff site a mode lives on -- so it is only the fallback, and the
-    projection test decides."""
+    projection test decides.
+
+    Last, a ROTATION of the lattice onto itself (`_lattice_rotations`). SMODES
+    writes Cartesian coordinates with a along x; a hexagonal POSCAR can put a
+    elsewhere (real SiO2 and BaTiO3 R3m: a1 at -60 degrees). The cell vectors
+    still coincide numerically -- a hexagonal lattice is invariant under 60
+    degree rotations -- so `tile_onto_supercell` matches them without
+    noticing, and its cell is the POSCAR's structure ROTATED by a lattice
+    operation that is not a symmetry (for quartz, the Dauphine twin). No
+    translation undoes that; rotating back does, and the projection test again
+    decides, so a wrong rotation raises as before."""
     from .freeze import FreezeError, align_by_nearest_neighbor, search_alignment_shift
 
     seen = []
@@ -1034,10 +1065,19 @@ def _seed_placements(reference: Structure, tiled: Structure, multipliers, origin
             continue
         if perm not in seen:
             seen.append(perm)
-            yield np.asarray(perm)
+            yield np.asarray(perm), np.eye(3)
     _shift, perm = search_alignment_shift(reference, tiled, 0.3)
     if perm is not None and list(perm) not in seen:
-        yield np.asarray(perm)
+        yield np.asarray(perm), np.eye(3)
+        seen.append(list(perm))
+    lattice = np.asarray(reference.lattice, float)
+    frac = np.asarray(tiled.frac_coords, float)
+    for W, rotation in _lattice_rotations(lattice):
+        rotated = Structure(comment=tiled.comment, lattice=lattice, species=list(tiled.species),
+                            frac_coords=(frac @ W.T) % 1.0)
+        _shift, perm = search_alignment_shift(reference, rotated, 0.3)
+        if perm is not None:
+            yield np.asarray(perm), rotation
 
 
 def position_labels(rep: Representation) -> list:

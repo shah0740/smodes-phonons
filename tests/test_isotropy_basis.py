@@ -221,6 +221,74 @@ class TestDecompositionRoundTripsOnTheIsotropyBasis(unittest.TestCase):
                 self.assertLess(max(abs(v) for v in stray), 1e-9, name)
 
 
+class TestHexagonalAxesNotAlongX(unittest.TestCase):
+    """Real SiO2 (P3_221, 154) and BaTiO3 R3m (160, hexagonal setting): both
+    POSCARs put a1 at -60 degrees from x, while SMODES writes Cartesian
+    coordinates with a along x. The hexagonal lattice maps onto itself under
+    that 60-degree rotation, so SMODES's cell vectors match the POSCAR's
+    numerically and `tile_onto_supercell` builds the POSCAR's structure
+    ROTATED by a lattice operation that is not a symmetry (for quartz, the
+    Dauphine twin). No translation places it, so before the fix every OPD at
+    Gamma (and SiO2's M) raised "SMODES's tiled cell does not align".
+
+    It takes a hexagonal lattice whose point group lacks the 6-fold: graphite
+    (P6_3/mmc) has the same a1 at -60 degrees, but a 60-degree rotation is a
+    symmetry of it up to c/2, which the translation search already finds.
+
+    `iso` output from the suite's saved cache (conftest)."""
+
+    CASES = {
+        # material: (smodes file, irrep, space group)
+        "SiO2 GM3": ("SiO2", "smodes_GM", "GM3"),
+        "SiO2 M1": ("SiO2", "smodes_M", "M1"),
+        "BaTiO3 R3m GM3": ("BaTiO3_R3m", "smodes_GM", "GM3"),
+        "BaTiO3 R3m F1": ("BaTiO3_R3m", "smodes_F", "F1"),
+    }
+
+    @staticmethod
+    def _load(material, smodes_file, label):
+        parent = Structure.from_poscar(FIXTURES / material / "POSCAR")
+        log = (FIXTURES / material / "findsym.log").read_text()
+        irrep = smodes.parse_smodes_output((FIXTURES / material / smodes_file).read_text()).irrep(label)
+        return parent, log, irrep
+
+    @staticmethod
+    def _rotated_about_z(structure, degrees):
+        """The same crystal, written in a Cartesian frame rotated about z."""
+        t = np.radians(degrees)
+        R = np.array([[np.cos(t), -np.sin(t), 0.0], [np.sin(t), np.cos(t), 0.0], [0.0, 0.0, 1.0]])
+        return Structure(comment=structure.comment, lattice=np.asarray(structure.lattice) @ R.T,
+                         species=list(structure.species), frac_coords=np.asarray(structure.frac_coords)), R
+
+    def test_the_basis_builds_and_transforms_by_isotropys_matrices(self):
+        """`joint_basis` checks every mode against ISOTROPY's matrices and
+        raises otherwise, so building it is the test."""
+        for name, (material, smodes_file, label) in self.CASES.items():
+            with self.subTest(case=name):
+                parent, log, irrep = self._load(material, smodes_file, label)
+                joint = ib.joint_basis([(irrep, ib.seeds_of(irrep))], parent, ib.space_group_from_log(log), log)
+                self.assertEqual(len(joint.bases[label]), len(irrep.modes))
+
+    def test_the_basis_does_not_depend_on_the_cartesian_frame(self):
+        """With a1 rotated onto x the POSCAR needs no rotation (the translation
+        placement works); as supplied it needs one. Same crystal, so each
+        mode must span the same displacements, rotated with the frame."""
+        for name, (material, smodes_file, label) in self.CASES.items():
+            with self.subTest(case=name):
+                parent, log, irrep = self._load(material, smodes_file, label)
+                a1 = np.asarray(parent.lattice, float)[0]
+                along_x, R = self._rotated_about_z(parent, -np.degrees(np.arctan2(a1[1], a1[0])))
+                np.testing.assert_allclose(np.asarray(along_x.lattice)[0, 1], 0.0, atol=1e-9)
+                sg = ib.space_group_from_log(log)
+                supplied = ib.joint_basis([(irrep, ib.seeds_of(irrep))], parent, sg, log)
+                aligned = ib.joint_basis([(irrep, ib.seeds_of(irrep))], along_x, sg, log)
+                for m, (W, V) in enumerate(zip(supplied.bases[label], aligned.bases[label])):
+                    rotated = (W @ R.T).reshape(W.shape[0], -1)       # supplied basis, carried into the x frame
+                    V = V.reshape(V.shape[0], -1)
+                    np.testing.assert_allclose(rotated.T @ rotated, V.T @ V, atol=1e-8,
+                                               err_msg=f"{name} mode {m}: different subspace")
+
+
 TOP_FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
 

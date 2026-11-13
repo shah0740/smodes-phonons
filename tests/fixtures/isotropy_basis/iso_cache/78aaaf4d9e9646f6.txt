@@ -1,0 +1,14 @@
+Isotropy, Version 9.6.1, Jan 2022
+Harold T. Stokes, Dorian M. Hatch, and Branton J. Campbell
+Brigham Young University
+Current setting is International (new ed.) with conventional basis vectors.
+*****Generators      Rotation matrix, translation
+(C3+|0,0,2/3)   -0.50000, 0.86603, 0.00000
+                -0.86603, -0.50000, 0.00000
+                0.00000, 0.00000, 1.00000
+                0.00000, 0.00000, 3.62108
+(C21''|0,0,1/3) 1.00000, 0.00000, 0.00000
+                -0.00000, -1.00000, 0.00000
+                -0.00000, 0.00000, -1.00000
+                0.00000, 0.00000, 1.81054
+*

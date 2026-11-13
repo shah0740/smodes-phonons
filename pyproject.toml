@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "smodes-phonons"
-version = "2.0.0"
+version = "2.0.1"
 description = "Symmetry-adapted frozen-phonon calculations driven by the ISOTROPY suite"
 readme = "README.md"
 license = {file = "LICENSE"}
